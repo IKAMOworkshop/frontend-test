@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=MuseoModerno:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=MuseoModerno:wght@600&display=swap");
 nav {
   width: 100%;
   padding: 36px;
@@ -20,9 +20,32 @@ nav {
   gap: 24px;
 }
 
+.footer {
+  width: 100%;
+  padding: 100px 148px 60px 148px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+  align-items: center;
+  border-style: solid;
+  border-width: 1px 0px 0px 0px;
+  border-color: rgb(61, 68, 75);
+}
+
 .router-link {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  font-size: 0.8rem;
+  color: rgb(112, 126, 139);
+  text-decoration: none;
+}
+
+.footer-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   font-size: 0.8rem;
   color: rgb(112, 126, 139);
   text-decoration: none;
@@ -108,7 +131,7 @@ nav {
 
 .landing-section-title, .project-title {
   font-family: "MuseoModerno", cursive;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 12rem;
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -121,7 +144,7 @@ nav {
 
 .project-description {
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.8rem;
   color: rgb(112, 126, 139);
   text-decoration: none;
