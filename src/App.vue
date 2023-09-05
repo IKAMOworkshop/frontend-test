@@ -1,4 +1,5 @@
 <template>
+    <customCursor />
     <nav>
         <ul class="nav-group">
             <li><router-link :to="{name: 'home'}" class="router-link"><img src="@/assets/mock-logo.svg" alt=""></router-link></li>
@@ -14,6 +15,7 @@
 
 <script setup>
     import { RouterView } from 'vue-router'
+    import customCursor from '@/components/customCursor.vue'
 
     // Three JS
     import * as THREE from 'three';
