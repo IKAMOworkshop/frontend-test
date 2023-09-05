@@ -21,9 +21,55 @@
 
         <section class="work-title-section">
             <h2 class="landing-section-title">WORKS.</h2>
+            <div class="scroll-title-container">
+                <div class="scroll-row">
+                    <div class="row-1">
+                        <h3 class="scroll-title"> CASE STUDIES CASE STUDIES</h3>
+                    </div>
+                    <div class="row-1">
+                        <h3 class="scroll-title"> CASE STUDIES CASE STUDIES</h3>
+                    </div>
+                </div>
+                <div class="scroll-row">
+                    <div class="row-2">
+                        <h3 class="scroll-title"> CASE STUDIES CASE STUDIES</h3>
+                    </div>
+                    <div class="row-2">
+                        <h3 class="scroll-title"> CASE STUDIES CASE STUDIES</h3>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="landing-project-section">
             <projectTile />
+        </section>
+        <section class="contact-subtitle-section">
+            <p class="contact-subtitle">
+                Saw something cool?
+                <br />Want to learn more?
+                <br />Or any other cool things?
+            </p>
+        </section>
+        <section class="contact-title-section">
+            <h2 class="landing-section-title">LET'S CHAT!</h2>
+            <div class="scroll-title-container">
+                <div class="scroll-row">
+                    <div class="row-1">
+                        <h3 class="scroll-title">CONTACT ME CONTACT ME</h3>
+                    </div>
+                    <div class="row-1">
+                        <h3 class="scroll-title">CONTACT ME CONTACT ME</h3>
+                    </div>
+                </div>
+                <div class="scroll-row">
+                    <div class="row-2">
+                        <h3 class="scroll-title">CONTACT ME CONTACT ME</h3>
+                    </div>
+                    <div class="row-2">
+                        <h3 class="scroll-title">CONTACT ME CONTACT ME</h3>
+                    </div>
+                </div>
+            </div>
         </section>
         <projectFooter />
     </main>

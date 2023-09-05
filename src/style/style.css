@@ -21,7 +21,7 @@ nav {
 }
 
 .footer {
-  width: 100%;
+  min-width: 100%;
   padding: 100px 148px 60px 148px;
 }
 
@@ -72,15 +72,58 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 0px 200px 0px;
+  padding: 120px 0px 400px 0px;
 }
 
 .landing-project-section {
   min-width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 200px;
+  gap: 320px;
   padding: 0px 148px;
+}
+
+.contact-subtitle-section {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 200px 0px 100px 0px;
+}
+
+.contact-title-section {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 200px 0px 200px 0px;
+}
+
+.scroll-title-container {
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+  transform-origin: center;
+  transform: rotate(-3deg);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scroll-row {
+  display: flex;
+  gap: 32px;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.scroll-title-container > .scroll-row > .row-1 {
+  animation: scrollTextRight 20s infinite linear;
+}
+
+.scroll-title-container > .scroll-row > .row-2 {
+  animation: scrollTextLeft 20s infinite linear;
 }
 
 .project-section {
@@ -159,6 +202,41 @@ nav {
   text-decoration: none;
 }
 
+.contact-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: rgb(112, 126, 139);
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.8rem;
+}
+
+.scroll-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 12rem;
+  color: rgba(112, 126, 139, 0);
+  white-space: nowrap;
+  -webkit-text-stroke: 1px #3D444B;
+}
+
+@keyframes scrollTextRight {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(-50%);
+  }
+}
+@keyframes scrollTextLeft {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(50%);
+  }
+}
 /*width*/
 ::-webkit-scrollbar {
   width: 0px;
