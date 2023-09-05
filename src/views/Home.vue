@@ -1,11 +1,35 @@
 <template>
     <canvas id="bg" ref="experience"></canvas>
-    <h1>Home</h1>
-    <counter />
+    <header class="landing-hero">
+        <div class="hero-row">
+            <h1 class="hero-title">></h1>
+            <h1 class="hero-title">HELLO THERE</h1>
+        </div>
+        <div class="hero-row">
+            <h1 class="hero-title">I'M JEREMY</h1>
+            <h1 class="hero-title">!</h1>
+        </div>
+        <div class="hero-row">
+            <h1 class="hero-title">></h1>
+            <h1 class="hero-title">I DESIGN</h1>
+        </div>
+        <div class="hero-row">
+            <h1 class="hero-title">AND DEVELOP</h1>
+            <h1 class="hero-title">.</h1>
+        </div>
+    </header>
+    <main>
+        <section class="work-title-section">
+            <h2 class="landing-section-title">WORKS.</h2>
+        </section>
+        <section class="landing-project-section">
+            <projectTile />
+        </section>
+    </main>
   </template>
   
   <script setup>
-    import counter from '@/components/Counter.vue'
+    import projectTile from '@/components/projectTile.vue'
 
     import * as THREE from 'three';
     import { onMounted } from 'vue';

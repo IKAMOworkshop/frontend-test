@@ -1,1 +1,201 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=MuseoModerno:wght@700&display=swap");
+nav {
+  width: 100%;
+  padding: 36px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav-group {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link-group {
+  display: flex;
+  gap: 24px;
+}
+
+.router-link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: rgb(112, 126, 139);
+  text-decoration: none;
+}
+
+.landing-hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.hero-row {
+  min-width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.work-title-section {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0px 200px 0px;
+}
+
+.landing-project-section {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  padding: 0px 148px;
+}
+
+.project-section {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.project-image-container {
+  width: 80%;
+  height: 720px;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 40px;
+}
+
+.detail-container {
+  width: 20%;
+}
+
+.project-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.project-button {
+  padding: 16px;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255);
+}
+
+.hero-title {
+  font-family: "MuseoModerno", cursive;
+  font-weight: 700;
+  font-size: 5rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.landing-section-title, .project-title {
+  font-family: "MuseoModerno", cursive;
+  font-weight: 700;
+  font-size: 12rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.project-title {
+  margin-left: -600px;
+  margin-bottom: 60px;
+}
+
+.project-description {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: rgb(112, 126, 139);
+  text-decoration: none;
+  line-height: 1rem;
+}
+
+.project-tags {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: rgb(112, 126, 139);
+  text-decoration: none;
+}
+
+/*width*/
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/*track*/
+::-webkit-scrollbar-track {
+  background: rgb(15, 27, 18);
+}
+
+/*thumb*/
+::-webkit-scrollbar-thumb {
+  background: rgb(19, 21, 22);
+  border-radius: 100px;
+}
+
+body .transition {
+  display: block;
+}
+
+.w-editor .transition {
+  display: none;
+}
+
+.no-scroll-transition {
+  overflow: hidden;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+body {
+  background-color: rgb(24, 27, 30);
+}
+
+h1 {
+  font-family: "MuseoModerno", cursive;
+  font-weight: 700;
+  font-size: 5rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}/*# sourceMappingURL=style.css.map */
