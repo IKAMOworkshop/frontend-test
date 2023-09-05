@@ -1,7 +1,5 @@
-# Vue 3 + Vite
+# ikamo.cc
+This is a personal portfolio project compiling all my frontend projects (including this one). The goal is to practice Vite with vue and Three JS.
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Personal Takeaways
+- Although you can always search up syntax for Vue, but it can speed things up to memorize some commonly used one such as code structure, config setup, and router setup.
