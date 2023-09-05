@@ -169,6 +169,7 @@ body .transition {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  scroll-behavior: smooth;
 }
 
 body {

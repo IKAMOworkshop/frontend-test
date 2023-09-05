@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "locomotive-scroll": "^4.1.4",
+    "luxy.js": "^0.1.0",
     "three": "^0.156.1",
     "vue": "^3.3.4"
   },
