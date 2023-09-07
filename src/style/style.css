@@ -294,6 +294,111 @@ body .transition {
   transition: all 1s;
 }
 
+.about-hero {
+  min-width: 100%;
+  padding: 100px 148px 0px 148px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 200px;
+}
+
+.about-hero-col-1 {
+  min-width: 40%;
+  height: 800px;
+  display: flex;
+  align-items: center;
+}
+
+.about-hero-col-2 {
+  min-width: 60%;
+  height: 800px;
+  background-color: rgb(46, 52, 57);
+  border-radius: 40px;
+}
+
+.absolute {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.section-container {
+  width: 100%;
+  margin-bottom: 200px;
+  padding: 0px 148px;
+}
+
+.about-col-system {
+  width: 100%;
+  display: flex;
+  gap: 36px;
+}
+
+.about-col-main {
+  width: 70%;
+}
+
+.about-col-blocker {
+  width: 30%;
+}
+
+.about-col-half {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.image-container {
+  width: 100%;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 40px;
+}
+
+.model-container {
+  width: 100%;
+  background-color: rgb(46, 52, 57);
+  border-radius: 40px;
+}
+
+.about-title {
+  font-family: "MuseoModerno", cursive;
+  font-weight: 700;
+  font-size: 8.5rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.about-subtitle {
+  font-family: "MuseoModerno", cursive;
+  font-weight: 600;
+  font-size: 6rem;
+  color: rgb(255, 255, 255);
+  line-height: 6.5rem;
+}
+
+.about-description {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: rgb(112, 126, 139);
+  text-decoration: none;
+  line-height: 1.8rem;
+  width: 480px;
+}
+
 * {
   box-sizing: border-box;
   -webkit-user-select: none;
@@ -306,15 +411,7 @@ body {
   background-color: rgb(24, 27, 30);
 }
 
-h1 {
-  font-family: "MuseoModerno", cursive;
-  font-weight: 700;
-  font-size: 5rem;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-}
-
-canvas {
+#bg {
   position: fixed;
   top: 0;
   left: 0;

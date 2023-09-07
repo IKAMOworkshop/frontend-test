@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory} from "vue-router";
 
 const routes = [
     {
@@ -20,7 +20,11 @@ const routes = [
 
 const router = createRouter({
     routes,
-    history: createWebHashHistory(),
+    history: createWebHistory(),
+    scrollBehavior (to, from, savedPosition) {
+        return savedPosition || {top:0}
+        return {top:null, left:null, behavior:null}
+    }
 });
 
 export default router;

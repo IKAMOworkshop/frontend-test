@@ -6,6 +6,7 @@
 @import "./landing";
 @import "./scrollbar";
 @import "./cursor.scss";
+@import "./about.scss";
 
 *{
     box-sizing: border-box;
@@ -17,15 +18,7 @@ body{
     background-color: rgba(24, 27, 30, 1);
 }
 
-h1{
-    font-family: 'MuseoModerno', cursive;
-    font-weight: 700;
-    font-size: 5rem;
-    color: rgba(255,255,255,1);
-    text-decoration: none;
-}
-
-canvas{
+#bg{
     position: fixed;
     top: 0;
     left: 0;

@@ -83,13 +83,13 @@
         mounted() {
             luxy.init({
                 wrapper: '#element',
-                wrapperSpeed: 0.050,
+                wrapperSpeed: 0.08,
             });
-    }
+        }
     };
 </script>
 
 <script setup>
-import projectTile from '@/components/projectTile.vue'
-import projectFooter from '@/components/projectFooter.vue'
+    import projectTile from '@/components/projectTile.vue'
+    import projectFooter from '@/components/projectFooter.vue'
 </script>
