@@ -26,8 +26,8 @@
         </section>
 
         <section class="section-container">
-            <div class="about-col-system">
-                <div class="about-col-half">
+            <div class="col-system">
+                <div class="col-half">
                     <div class="image-container" style="height: 800px;">
                         <img src="@/assets/about/desk.png" alt="" class="about-image">
                     </div>
@@ -35,7 +35,7 @@
                         <img src="@/assets/about/prototype.png" alt="" class="about-image">
                     </div>
                 </div>
-                <div class="about-col-half" style="margin-top: 200px;">
+                <div class="col-half" style="margin-top: 200px;">
                     <div class="image-container" style="height: 800px;">
                         <img src="@/assets/about/robot_model.png" alt="" class="about-image">
                     </div>
@@ -47,7 +47,7 @@
         </section>
 
         <section class="section-container">
-            <div class="about-col-system">
+            <div class="col-system">
                 <div class="about-col-main">
                     <h2 class="about-subtitle">
                         IT'S A FUN PROCESS, AND IT ALLOWS ME TO EXPLORE AND LEARN.
@@ -61,8 +61,8 @@
         </section>
 
         <section class="section-container">
-            <div class="about-col-system">
-                <div class="about-col-half" style="margin-top: 200px;">
+            <div class="col-system">
+                <div class="col-half" style="margin-top: 200px;">
                     <div class="model-container" style="height: 1200px;">
 
                     </div>
@@ -70,7 +70,7 @@
 
                     </div>
                 </div>
-                <div class="about-col-half">
+                <div class="col-half">
                     <div class="model-container" style="height: 800px;">
 
                     </div>
@@ -92,8 +92,8 @@
         </section>
 
         <section class="section-container">
-            <div class="about-col-system">
-                <div class="about-col-half">
+            <div class="col-system">
+                <div class="col-half">
                     <div class="image-container" style="height: 1400px;">
                         <img src="@/assets/about/japan_1.png" alt="" class="about-image">
                     </div>
@@ -115,7 +115,7 @@
             </div>
         </section>
 
-        <section class="section-container">
+        <section class="contact-container">
             <p class="contact-subtitle">
                 Saw something cool?
                 <br />Want to learn more?

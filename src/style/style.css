@@ -83,6 +83,12 @@ nav {
   padding: 0px 148px;
 }
 
+.contact-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .contact-subtitle-section {
   min-width: 100%;
   display: flex;
@@ -199,17 +205,16 @@ nav {
   font-weight: 500;
   font-size: 0.8rem;
   color: rgb(112, 126, 139);
-  text-decoration: none;
 }
 
 .contact-subtitle {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: rgb(112, 126, 139);
   text-decoration: none;
   text-align: center;
-  line-height: 1.8rem;
+  line-height: 1.2rem;
 }
 
 .scroll-title {
@@ -266,34 +271,6 @@ body .transition {
   position: relative;
 }
 
-.cursor-container {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  z-index: 1001;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  pointer-events: none;
-}
-
-.cursor {
-  width: 24px;
-  height: 24px;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 100%;
-  border-color: rgba(255, 255, 255, 0.25);
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 1s;
-}
-
 .about-hero {
   min-width: 100%;
   padding: 100px 148px 0px 148px;
@@ -324,31 +301,12 @@ body .transition {
   gap: 60px;
 }
 
-.section-container {
-  width: 100%;
-  margin-bottom: 200px;
-  padding: 0px 148px;
-}
-
-.about-col-system {
-  width: 100%;
-  display: flex;
-  gap: 36px;
-}
-
 .about-col-main {
   width: 70%;
 }
 
 .about-col-blocker {
   width: 30%;
-}
-
-.about-col-half {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
 }
 
 .reverse {
@@ -378,7 +336,6 @@ body .transition {
   font-weight: 700;
   font-size: 8.5rem;
   color: rgb(255, 255, 255);
-  text-decoration: none;
 }
 
 .about-subtitle {
@@ -397,6 +354,127 @@ body .transition {
   text-decoration: none;
   line-height: 1.8rem;
   width: 480px;
+}
+
+.experience-header {
+  width: 100%;
+  padding: 200px 148px 0px 148px;
+  margin: 0px 0px 400px 0px;
+}
+
+.learning-tile {
+  width: 100%;
+  padding: 60px;
+  background-color: rgb(46, 52, 57);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  border-radius: 40px;
+}
+
+.experience-tile {
+  width: 100%;
+  padding: 60px;
+  background-color: rgb(46, 52, 57);
+  display: flex;
+  gap: 60px;
+  border-radius: 40px;
+}
+
+.capability-tile {
+  width: 100%;
+  padding: 60px;
+  background-color: rgb(46, 52, 57);
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  border-radius: 40px;
+}
+
+.experience-profile {
+  min-width: 24%;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.centered-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.left-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile-image {
+  width: 100px;
+  height: auto;
+}
+
+.separator {
+  min-width: 1px;
+  min-height: 100%;
+  background-color: rgb(77, 94, 114);
+  border-radius: 100%;
+}
+
+.experience-list {
+  list-style-type: disc;
+}
+
+.experience-title {
+  font-family: "MuseoModerno", cursive;
+  font-weight: 700;
+  font-size: 12rem;
+  color: rgb(255, 255, 255);
+}
+
+.experience-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  margin-bottom: 36px;
+}
+
+.centered-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  line-height: 1.2rem;
+  text-align: center;
+}
+
+.centered-description {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: rgb(112, 126, 139);
+  line-height: 1.2rem;
+  text-align: center;
+}
+
+.left-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  line-height: 1.2rem;
+}
+
+.left-description {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: rgb(112, 126, 139);
+  line-height: 1.2rem;
 }
 
 * {
@@ -426,4 +504,36 @@ button {
   font: inherit;
   cursor: pointer;
   outline: inherit;
+}
+
+.section-container {
+  width: 100%;
+  margin-bottom: 200px;
+  padding: 0px 148px;
+}
+
+.col-system {
+  width: 100%;
+  display: flex;
+  gap: 36px;
+}
+
+.row-system {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.col-half {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.col-half-sm {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */

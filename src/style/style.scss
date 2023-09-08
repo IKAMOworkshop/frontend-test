@@ -5,8 +5,8 @@
 @import "./navbar";
 @import "./landing";
 @import "./scrollbar";
-@import "./cursor.scss";
 @import "./about.scss";
+@import "./experience";
 
 *{
     box-sizing: border-box;
@@ -33,4 +33,36 @@ button{
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+}
+
+.section-container{
+    width: 100%;
+    margin-bottom: 200px;
+    padding: 0px 148px;
+}
+
+.col-system{
+    width: 100%;
+    display: flex;
+    gap: 36px;
+}
+
+.row-system{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.col-half{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.col-half-sm{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
 }

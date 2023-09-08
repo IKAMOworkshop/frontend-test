@@ -1,0 +1,121 @@
+.experience-header{
+    width: 100%;
+    padding: 200px 148px 0px 148px;
+    margin: 0px 0px 400px 0px;
+}
+
+.learning-tile{
+    width: 100%;
+    padding: 60px;
+    background-color: rgba(46,52,57,1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    border-radius: 40px;
+}
+
+.experience-tile{
+    width: 100%;
+    padding: 60px;
+    background-color: rgba(46,52,57,1);
+    display: flex;
+    gap: 60px;
+    border-radius: 40px;
+}
+
+.capability-tile{
+    width: 100%;
+    padding: 60px;
+    background-color: rgba(46,52,57,1);
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    border-radius: 40px;
+}
+
+.experience-profile{
+    min-width: 24%;
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.centered-text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.left-text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.profile-image{
+    width: 100px;
+    height: auto;
+}
+
+.separator{
+    min-width: 1px;
+    min-height: 100%;
+    background-color: rgba(77, 94, 114, 1);
+    border-radius: 100%;
+}
+
+.experience-list{
+    list-style-type: disc;
+}
+
+// Typography
+.experience-title{
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 700;
+    font-size: 12rem;
+    color: rgba(255,255,255,1);
+}
+
+.experience-subtitle{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: rgba(255,255,255,1);
+    margin-bottom: 36px;
+}
+
+.centered-title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: rgba(255,255,255,1);
+    line-height: 1.2rem;
+    text-align: center;
+}
+
+.centered-description{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: rgba(112,126,139,1);
+    line-height: 1.2rem;
+    text-align: center;
+}
+
+.left-title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: rgba(255,255,255,1);
+    line-height: 1.2rem;
+}
+
+.left-description{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: rgba(112,126,139,1);
+    line-height: 1.2rem;
+}

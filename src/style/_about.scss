@@ -28,31 +28,12 @@
     gap: 60px;
 }
 
-.section-container{
-    width: 100%;
-    margin-bottom: 200px;
-    padding: 0px 148px;
-}
-
-.about-col-system{
-    width: 100%;
-    display: flex;
-    gap: 36px;
-}
-
 .about-col-main{
     width: 70%;
 }
 
 .about-col-blocker{
     width: 30%;
-}
-
-.about-col-half{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 36px;
 }
 
 .reverse {
@@ -82,7 +63,6 @@
     font-weight: 700;
     font-size: 8.5rem;
     color: rgba(255,255,255,1);
-    text-decoration: none;
 }
 
 .about-subtitle{
