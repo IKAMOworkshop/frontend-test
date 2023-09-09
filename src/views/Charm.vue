@@ -138,7 +138,7 @@
         </section>
 
 
-        <router class="contact-title-section">
+        <router-link class="contact-title-section" :to="{name: 'bright'}">
             <h2 class="landing-section-title">NEXT PROJECT!</h2>
             <div class="scroll-title-container">
                 <div class="scroll-row">
@@ -158,7 +158,7 @@
                     </div>
                 </div>
             </div>
-        </router>
+        </router-link>
 
         <projectFooter />
     </main>
@@ -166,6 +166,7 @@
 
 <script setup>
     import projectFooter from '@/components/projectFooter.vue'
+    import { RouterView } from 'vue-router'
 </script>
 
 <script>

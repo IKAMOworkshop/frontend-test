@@ -103,6 +103,7 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 200px 0px 200px 0px;
+  text-decoration: none;
 }
 
 .scroll-title-container {
