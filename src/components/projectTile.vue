@@ -9,7 +9,12 @@
                 <strong class="project-description">{{ project.description }}</strong>
                 <p class="project-tags">{{ project.tags }}</p>
             </div>
-            <button class="project-button"><img src="@/assets/right-arrow.svg" alt=""></button>
+            <button class="project-button">
+                <router-link :to="'/'+project.path">
+                    <img src="@/assets/right-arrow.svg" alt="">
+                </router-link>
+            </button>
+
         </div>
     </section>
 </template>
@@ -24,22 +29,29 @@
                 cover: './src/assets/landing/charm.png',
                 name: 'CHARM',
                 description: 'My personal portfolio for Spring 2023 ArtCenter Gradshow.',
-                tags: '#vanillia;'
+                tags: '#vanillia;',
+                path: 'charm'
                 },
                 {
                 cover: './src/assets/landing/charm.png',
                 name: 'BRIGHT',
                 description: 'A personal log blog for documenting milestones in my life.',
-                tags: '#astro #sanity-cms'
+                tags: '#astro #sanity-cms',
+                path: 'bright'
                 },
                 {
                 cover: './src/assets/landing/charm.png',
                 name: 'ARCANE',
                 description: 'A portfolio project dedicated to showcase my frontend projects.',
-                tags: '#vite-vue #threejs'
+                tags: '#vite-vue #threejs',
+                path: 'arcane'
                 }
             ]
             }
         }
     }
+</script>
+
+<script setup>
+    import { RouterView } from 'vue-router'
 </script>

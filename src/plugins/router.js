@@ -16,6 +16,21 @@ const routes = [
         name: 'experience',
         component: () => import('@/views/Experience.vue')
     },
+    {
+        path: '/charm',
+        name: 'charm',
+        component: () => import('@/views/Charm.vue')
+    },
+    {
+        path: '/bright',
+        name: 'bright',
+        component: () => import('@/views/Bright.vue')
+    },
+    {
+        path: '/arcane',
+        name: 'arcane',
+        component: () => import('@/views/Arcane.vue')
+    },
 ];
 
 const router = createRouter({
