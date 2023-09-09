@@ -24,7 +24,7 @@
             <div class="video-wrapper">
                 <!-- Video -->
                 <video class="content-video" autoplay muted loop>
-                    <source src="@/assets/charm/Landing2023.mp4" type="video/mp4">
+                    <source src="@/assets/charm/landing.mp4" type="video/mp4">
                 </video>
             </div>
         </section>
@@ -46,7 +46,7 @@
                     <div class="video-wrapper-sm">
                         <!-- Video -->
                         <video class="content-video" autoplay muted loop>
-                            <source src="@/assets/charm/Landing2023.mp4" type="video/mp4">
+                            <source src="@/assets/charm/cursor_scroll.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -54,25 +54,7 @@
                     <div class="video-wrapper-sm">
                         <!-- Video -->
                         <video class="content-video" autoplay muted loop>
-                            <source src="@/assets/charm/Landing2023.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-            </div>
-            <div class="col-system">
-                <div class="col-half">
-                    <div class="video-wrapper-sm">
-                        <!-- Video -->
-                        <video class="content-video" autoplay muted loop>
-                            <source src="@/assets/charm/Landing2023.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-                <div class="col-half">
-                    <div class="video-wrapper-sm">
-                        <!-- Video -->
-                        <video class="content-video" autoplay muted loop>
-                            <source src="@/assets/charm/Landing2023.mp4" type="video/mp4">
+                            <source src="@/assets/charm/navigation.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
