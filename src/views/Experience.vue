@@ -1,7 +1,7 @@
 <template>
     <main id="element">
         <header class="experience-header">
-            <h1 class="experience-title">IN MY 8 YEARS OF DESIGN.</h1>
+            <h1 class="large-title">IN MY 8 YEARS OF DESIGN.</h1>
         </header>
 
         <section class="section-container">

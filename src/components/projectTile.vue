@@ -14,7 +14,6 @@
                     <img src="@/assets/right-arrow.svg" alt="">
                 </router-link>
             </button>
-
         </div>
     </section>
 </template>
@@ -29,7 +28,7 @@
                 cover: './src/assets/landing/charm.png',
                 name: 'CHARM',
                 description: 'My personal portfolio for Spring 2023 ArtCenter Gradshow.',
-                tags: '#vanillia;',
+                tags: '#vanillia',
                 path: 'charm'
                 },
                 {

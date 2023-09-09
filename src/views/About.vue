@@ -16,11 +16,11 @@
         </header>
 
         <section class="section-container">
-            <div class="about-col-system reverse">
-                <div class="about-col-main">
+            <div class="col-system reverse">
+                <div class="col-main">
                     <h2 class="about-subtitle">I LOVE TO BUILD OUT THE THINGS I'VE DESIGNED.</h2>
                 </div>
-                <div class="about-col-blocker">
+                <div class="col-sub">
                 </div>
             </div>
         </section>
@@ -48,14 +48,14 @@
 
         <section class="section-container">
             <div class="col-system">
-                <div class="about-col-main">
+                <div class="col-main">
                     <h2 class="about-subtitle">
                         IT'S A FUN PROCESS, AND IT ALLOWS ME TO EXPLORE AND LEARN.
                         <br />
                         <br />OUTSIDE OF BUILDING THINGS, I ENJOYS...
                     </h2>
                 </div>
-                <div class="about-col-blocker">
+                <div class="col-sub">
                 </div>
             </div>
         </section>
@@ -82,11 +82,11 @@
         </section>
 
         <section class="section-container">
-            <div class="about-col-system reverse">
-                <div class="about-col-main">
+            <div class="col-system reverse">
+                <div class="col-main">
                     <h2 class="about-subtitle">IT HAS BEEN A WHILE SINCE COVICE, BUT I SPEND A LOT OF TIME TRAVELLING TO JAPAN.</h2>
                 </div>
-                <div class="about-col-blocker">
+                <div class="col-sub">
                 </div>
             </div>
         </section>

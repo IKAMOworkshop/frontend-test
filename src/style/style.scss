@@ -7,6 +7,7 @@
 @import "./scrollbar";
 @import "./about.scss";
 @import "./experience";
+@import "./project";
 
 *{
     box-sizing: border-box;
@@ -65,4 +66,36 @@ button{
     width: 50%;
     display: flex;
     flex-direction: column;
+}
+
+.col-main{
+    width: 70%;
+}
+
+.col-sub{
+    width: 30%;
+}
+
+// Typography
+.large-title{
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 700;
+    font-size: 12rem;
+    color: rgba(255,255,255,1);
+}
+
+.left-title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: rgba(255,255,255,1);
+    line-height: 1.2rem;
+}
+
+.left-description{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: rgba(112,126,139,1);
+    line-height: 1.2rem;
 }
