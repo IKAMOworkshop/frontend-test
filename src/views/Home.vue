@@ -17,6 +17,9 @@
                 <h1 class="hero-title">AND DEVELOP</h1>
                 <h1 class="hero-title">.</h1>
             </div>
+            <div class="scroll-down">
+                <img src="@/assets/down-arrow.svg" alt="">
+            </div>
         </div>
 
         <section class="work-title-section">
@@ -46,8 +49,8 @@
         <section class="contact-subtitle-section">
             <p class="contact-subtitle">
                 Saw something cool?
+                <br /> or
                 <br />Want to learn more?
-                <br />Or any other cool things?
             </p>
         </section>
         <section class="contact-title-section">

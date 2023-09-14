@@ -19,7 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 120px 0px 400px 0px;
+    padding: 160px 0px 400px 0px;
 }
 
 .landing-project-section{
@@ -118,6 +118,21 @@
     border-color: rgb(255, 255, 255);
 }
 
+.scroll-down{
+    position: absolute;
+    top: 12%;
+    left: -4%;
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(111, 255, 212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 // Typography
 .hero-title{
     font-family: 'MuseoModerno', cursive;
@@ -153,7 +168,7 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: .8rem;
-    color: rgba(112,126,139,1);
+    color: rgba(111,255,212,1);
 }
 
 .contact-subtitle{

@@ -17,7 +17,7 @@ nav {
 
 .nav-link-group {
   display: flex;
-  gap: 24px;
+  gap: 32px;
 }
 
 .footer {
@@ -72,7 +72,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 120px 0px 400px 0px;
+  padding: 160px 0px 400px 0px;
 }
 
 .landing-project-section {
@@ -171,6 +171,21 @@ nav {
   border-color: rgb(255, 255, 255);
 }
 
+.scroll-down {
+  position: absolute;
+  top: 12%;
+  left: -4%;
+  width: 400px;
+  height: 400px;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(111, 255, 212);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero-title {
   font-family: "MuseoModerno", cursive;
   font-weight: 700;
@@ -205,7 +220,7 @@ nav {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 0.8rem;
-  color: rgb(112, 126, 139);
+  color: rgb(111, 255, 212);
 }
 
 .contact-subtitle {
