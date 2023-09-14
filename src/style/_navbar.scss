@@ -14,9 +14,28 @@ nav{
     align-items: center;
 }
 
+.router-list-item{
+    display: flex;
+    align-items: center;
+}
+
 .nav-link-group{
     display: flex;
+    justify-content: center;
+    align-self: center;
     gap: 32px;
+}
+
+.social-link-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.social-link{
+    width: 20px;
+    height: auto;
 }
 
 // Footer

@@ -3,8 +3,13 @@
         <ul class="nav-group">
             <li><router-link :to="{name: 'home'}" class="router-link"><img src="@/assets/mock-logo.svg" alt=""></router-link></li>
             <div class="nav-link-group">
-                <li><router-link :to="{name: 'about'}" class="router-link">About.</router-link></li>
-                <li><router-link :to="{name: 'experience'}" class="router-link">Experience.</router-link></li>
+                <li class="router-list-item"><router-link :to="{name: 'about'}" class="router-link">About.</router-link></li>
+                <li class="router-list-item"><router-link :to="{name: 'experience'}" class="router-link">Experience.</router-link></li>
+                <ul class="social-link-group">
+                    <li><button><img src="@/assets/mail.svg" alt="" class="social-link"></button></li>
+                    <li><a href="https://github.com/IKAMOworkshop" target="_blank"><img src="@/assets/github.svg" alt="" class="social-link"></a></li>
+                    <li><a href="https://www.linkedin.com/in/jeremystudio/" target="_blank"><img src="@/assets/linkedin.svg" alt="" class="social-link"></a></li>
+                </ul>
             </div>
         </ul>
     </nav>
