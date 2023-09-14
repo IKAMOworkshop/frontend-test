@@ -1,10 +1,11 @@
 <template>
+    <cursor/>
     <nav>
         <ul class="nav-group">
-            <li><router-link :to="{name: 'home'}" class="router-link"><img src="@/assets/mock-logo.svg" alt=""></router-link></li>
+            <li><button><router-link :to="{name: 'home'}" class="router-link"><img src="@/assets/mock-logo.svg" alt=""></router-link></button></li>
             <div class="nav-link-group">
-                <li class="router-list-item"><router-link :to="{name: 'about'}" class="router-link">About.</router-link></li>
-                <li class="router-list-item"><router-link :to="{name: 'experience'}" class="router-link">Experience.</router-link></li>
+                <li class="router-list-item"><button><router-link :to="{name: 'about'}" class="router-link">About.</router-link></button></li>
+                <li class="router-list-item"><button><router-link :to="{name: 'experience'}" class="router-link">Experience.</router-link></button></li>
                 <ul class="social-link-group">
                     <li><button><img src="@/assets/mail.svg" alt="" class="social-link"></button></li>
                     <li><a href="https://github.com/IKAMOworkshop" target="_blank"><img src="@/assets/github.svg" alt="" class="social-link"></a></li>
@@ -19,6 +20,7 @@
 
 <script setup>
     import { RouterView } from 'vue-router'
+    import cursor from '@/components/cursor.vue'
 
     // Three JS
     import * as THREE from 'three';

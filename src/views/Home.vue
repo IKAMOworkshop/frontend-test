@@ -2,23 +2,26 @@
     <main id="element">
         <div class="landing-hero">
             <div class="hero-row">
-                <h1 class="hero-title">></h1>
-                <h1 class="hero-title">HELLO THERE</h1>
-            </div>
-            <div class="hero-row">
+                <h1 class="hero-title">HELLO!</h1>
                 <h1 class="hero-title">I'M JEREMY</h1>
-                <h1 class="hero-title">!</h1>
             </div>
             <div class="hero-row">
-                <h1 class="hero-title">></h1>
-                <h1 class="hero-title">I DESIGN</h1>
+                <h1 class="hero-title">I</h1>
+                <h1 class="hero-title">DESIGN</h1>
             </div>
             <div class="hero-row">
-                <h1 class="hero-title">AND DEVELOP</h1>
-                <h1 class="hero-title">.</h1>
+                <h1 class="hero-title">DEVELOP</h1>
+                <h1 class="hero-title">&</h1>
+            </div>
+            <div class="hero-row">
+                <h1 class="hero-title">ENJOY</h1>
+                <h1 class="hero-title">DRAWING</h1>
             </div>
             <div class="scroll-down">
                 <img src="@/assets/down-arrow.svg" alt="">
+            </div>
+            <div class="project-image-container">
+                <img src="" alt="" class="project-image">
             </div>
         </div>
 
