@@ -1,12 +1,14 @@
 <template>
-    <cursor/>
-    <main id="element">
-        <header class="experience-header">
-            <h1 class="experience-title">BRIGHT</h1>
-        </header>
+    <div>
+        <cursor/>
+        <div id="element">
+            <header class="experience-header">
+                <h1 class="experience-title">BRIGHT</h1>
+            </header>
 
-        <projectFooter />
-    </main>
+            <projectFooter />
+        </div>
+    </div>
 </template>
 
 <script setup>

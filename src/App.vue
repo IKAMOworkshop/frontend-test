@@ -1,19 +1,29 @@
 <template>
-    <nav>
-        <ul class="nav-group">
-            <li><button><router-link :to="{name: 'home'}" class="router-link"><img src="@/assets/mock-logo.svg" alt=""></router-link></button></li>
-            <div class="nav-link-group">
-                <li class="router-list-item"><button><router-link :to="{name: 'about'}" class="router-link">About.</router-link></button></li>
-                <li class="router-list-item"><button><router-link :to="{name: 'experience'}" class="router-link">Experience.</router-link></button></li>
-                <ul class="social-link-group">
-                    <li><button><img src="@/assets/mail.svg" alt="" class="social-link"></button></li>
-                    <li><a href="https://github.com/IKAMOworkshop" target="_blank"><img src="@/assets/github.svg" alt="" class="social-link"></a></li>
-                    <li><a href="https://www.linkedin.com/in/jeremystudio/" target="_blank"><img src="@/assets/linkedin.svg" alt="" class="social-link"></a></li>
-                </ul>
-            </div>
-        </ul>
-    </nav>
-    <router-view></router-view>
+    <div>
+        <nav>
+            <ul class="nav-group">
+                <li><button><router-link to="/" class="router-link"><img src="@/assets/mock-logo.svg" alt=""></router-link></button></li>
+                <div class="nav-link-group">
+                    <li class="router-list-item"><button><router-link to="/about" class="router-link">About.</router-link></button></li>
+                    <li class="router-list-item"><button><router-link to="/experience" class="router-link">Experience.</router-link></button></li>
+                    <ul class="social-link-group">
+                        <li><button><img src="@/assets/mail.svg" alt="" class="social-link"></button></li>
+                        <li><a href="https://github.com/IKAMOworkshop" target="_blank"><img src="@/assets/github.svg" alt="" class="social-link"></a></li>
+                        <li><a href="https://www.linkedin.com/in/jeremystudio/" target="_blank"><img src="@/assets/linkedin.svg" alt="" class="social-link"></a></li>
+                    </ul>
+                </div>
+            </ul>
+        </nav>
+
+        <router-view v-slot="{ Component }">
+            <transition name="fade" mode="out-in">
+                <component :is="Component" />
+            </transition>
+        </router-view>
+    </div>
+
+
+
     <canvas id="bg" ref="experience"></canvas>
 </template>
 
@@ -69,3 +79,13 @@
         animate();
     });
 </script>
+
+<style>
+    .fade-enter-from, .fade-leave-to{
+        opacity: 0;
+    }
+
+    .fade-enter-active, .fade-leave-active{
+        transition: opacity 0.5s ease-out;
+    }
+</style>
