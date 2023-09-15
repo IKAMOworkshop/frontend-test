@@ -1,4 +1,5 @@
 <template>
+    <cursor/>
     <main id="element">
         <header class="project-header">
             <h1 class="header-title">CHARM</h1>
@@ -149,6 +150,7 @@
 <script setup>
     import projectFooter from '@/components/projectFooter.vue'
     import { RouterView } from 'vue-router'
+    import cursor from '@/components/cursor.vue'
 </script>
 
 <script>

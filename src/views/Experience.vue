@@ -1,4 +1,5 @@
 <template>
+    <cursor/>
     <main id="element">
         <header class="experience-header">
             <h1 class="large-title">IN MY 8 YEARS OF DESIGN.</h1>
@@ -64,6 +65,7 @@
     import experienceTile from '@/components/experienceTile.vue'
     import capabilityTile from '@/components/capabilityTile.vue'
     import projectFooter from '@/components/projectFooter.vue'
+    import cursor from '@/components/cursor.vue'
 </script>
 
 <script>

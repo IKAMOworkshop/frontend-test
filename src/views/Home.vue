@@ -1,4 +1,5 @@
 <template>
+    <cursor/>
     <main id="element">
         <div id="text" class="landing-hero">
             <div class="hero-row">
@@ -17,9 +18,9 @@
                 <h1 class="hero-title">ENJOY</h1>
                 <h1 class="hero-title over draw">DRAWING</h1>
             </div>
-            <div class="scroll-down">
+            <button class="scroll-down">
                 <img src="@/assets/down-arrow.svg" alt="">
-            </div>
+            </button>
             <div id="image-box" class="landing-image-container">
                 <img id="name" src="@/assets/landing/Profile.webp" alt="" class="landing-image">
                 <img id="design" src="@/assets/landing/design.png" alt="" class="landing-image">
@@ -101,6 +102,7 @@
 <script setup>
     import projectTile from '@/components/projectTile.vue'
     import projectFooter from '@/components/projectFooter.vue'
+    import cursor from '@/components/cursor.vue'
     import { onMounted } from 'vue';
 
     onMounted(() => {

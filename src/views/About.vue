@@ -1,4 +1,5 @@
 <template>
+    <cursor/>
     <main id="element">
         <header class="about-hero">
             <div class="about-hero-col-1">
@@ -151,6 +152,7 @@
 
 <script setup>
     import projectFooter from '@/components/projectFooter.vue'
+    import cursor from '@/components/cursor.vue'
 </script>
 
 <script>

@@ -1,5 +1,4 @@
 <template>
-    <cursor/>
     <nav>
         <ul class="nav-group">
             <li><button><router-link :to="{name: 'home'}" class="router-link"><img src="@/assets/mock-logo.svg" alt=""></router-link></button></li>
@@ -20,7 +19,6 @@
 
 <script setup>
     import { RouterView } from 'vue-router'
-    import cursor from '@/components/cursor.vue'
 
     // Three JS
     import * as THREE from 'three';
