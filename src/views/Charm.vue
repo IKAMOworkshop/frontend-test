@@ -68,8 +68,8 @@
 
         <section class="section-container">
             <div class="image-container">
-                <img src="@/assets/charm/router_code.png" alt="" class="project-image">
-                <img src="@/assets/charm/navigation.png" alt="" class="project-image">
+                <img src="@/assets/charm/router_code.png" alt="" class="content-image">
+                <img src="@/assets/charm/navigation.png" alt="" class="content-image">
             </div>
         </section>
 
@@ -85,7 +85,7 @@
         </section>
 
         <section class="section-container">
-            <img src="@/assets/charm/modular_code.png" alt="" class="project-image">
+            <img src="@/assets/charm/modular_code.png" alt="" class="content-image">
         </section>
 
         <section class="section-container">
@@ -93,7 +93,7 @@
         </section>
 
         <section class="section-container">
-            <img src="@/assets/charm/netlify.png" alt="" class="project-image">
+            <img src="@/assets/charm/netlify.png" alt="" class="content-image">
         </section>
 
         <section class="section-container">
@@ -149,20 +149,12 @@
 
 <script setup>
     import projectFooter from '@/components/projectFooter.vue'
-    import { RouterView } from 'vue-router'
     import cursor from '@/components/cursor.vue'
-</script>
+    import { onMounted } from 'vue';
 
-<script>
-    import luxy from 'luxy.js';
-
-    export default {
-        name: 'App',
-        mounted() {
-            luxy.init({
-                wrapper: '#element',
-                wrapperSpeed: 0.08,
-            });
-        }
-    };
+    onMounted(() => {
+        luxy.init({
+            wrapper: '#element',
+        });
+    });
 </script>

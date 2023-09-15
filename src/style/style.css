@@ -246,6 +246,8 @@ nav {
 .project-image-container {
   width: 80%;
   height: 720px;
+  border-radius: 40px;
+  overflow: hidden;
 }
 
 .project-image {
@@ -253,7 +255,6 @@ nav {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 40px;
 }
 
 .detail-container {
@@ -290,6 +291,10 @@ nav {
   font-size: 12rem;
   color: rgb(255, 255, 255);
   text-decoration: none;
+}
+
+.landing-section-title {
+  text-align: center;
 }
 
 .project-title {
@@ -602,7 +607,7 @@ body .transition {
   margin-bottom: 36px;
 }
 
-.project-image {
+.content-image {
   max-width: 100%;
   height: auto;
   border-radius: 40px;
@@ -711,7 +716,7 @@ body .transition {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  scroll-behavior: smooth;
+  cursor: none;
 }
 
 body {

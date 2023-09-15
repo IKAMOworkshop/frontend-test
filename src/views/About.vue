@@ -153,18 +153,11 @@
 <script setup>
     import projectFooter from '@/components/projectFooter.vue'
     import cursor from '@/components/cursor.vue'
-</script>
-
-<script>
-    import luxy from 'luxy.js';
-
-    export default {
-        name: 'App',
-        mounted() {
-            luxy.init({
-                wrapper: '#element',
-                wrapperSpeed: 0.08,
-            });
-        }
-    };
+    import { onMounted } from 'vue';
+    
+    onMounted(() => {
+        luxy.init({
+            wrapper: '#element',
+        });
+    });
 </script>

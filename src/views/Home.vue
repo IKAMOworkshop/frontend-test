@@ -85,27 +85,18 @@
     </main>
 </template>
 
-<script>
-    import luxy from 'luxy.js';
-
-    export default {
-        name: 'App',
-        mounted() {
-            luxy.init({
-                wrapper: '#element',
-                wrapperSpeed: 0.08,
-            });
-        }
-    };
-</script>
-
 <script setup>
+    import luxy from 'luxy.js';
     import projectTile from '@/components/projectTile.vue'
     import projectFooter from '@/components/projectFooter.vue'
     import cursor from '@/components/cursor.vue'
     import { onMounted } from 'vue';
 
     onMounted(() => {
+        luxy.init({
+            wrapper: '#element',
+        });
+
         function imageHover(p1, p2){
             const text = document.querySelector(p1);
             const image = document.getElementById(p2);

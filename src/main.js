@@ -3,8 +3,7 @@ import '@/style/reset.css'
 import '@/style/style.css'
 import App from '@/App.vue'
 import router from './plugins/router'
-import CursorFx from '@luxdamore/vue-cursor-fx';
-import '@luxdamore/vue-cursor-fx/dist/CursorFx.css';
+import luxy from 'luxy.js';
 
 
-createApp(App).use(router, CursorFx).mount('#app');
+createApp(App).use(router, luxy).mount('#app');
