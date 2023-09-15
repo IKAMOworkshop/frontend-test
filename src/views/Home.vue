@@ -1,27 +1,30 @@
 <template>
     <main id="element">
-        <div class="landing-hero">
+        <div id="text" class="landing-hero">
             <div class="hero-row">
                 <h1 class="hero-title">HELLO!</h1>
-                <h1 class="hero-title">I'M JEREMY</h1>
+                <h1 class="hero-title over name">JEREMY</h1>
             </div>
             <div class="hero-row">
                 <h1 class="hero-title">I</h1>
-                <h1 class="hero-title">DESIGN</h1>
+                <h1 class="hero-title over design">DESIGN</h1>
             </div>
             <div class="hero-row">
-                <h1 class="hero-title">DEVELOP</h1>
+                <h1 class="hero-title over develop">DEVELOP</h1>
                 <h1 class="hero-title">&</h1>
             </div>
             <div class="hero-row">
                 <h1 class="hero-title">ENJOY</h1>
-                <h1 class="hero-title">DRAWING</h1>
+                <h1 class="hero-title over draw">DRAWING</h1>
             </div>
             <div class="scroll-down">
                 <img src="@/assets/down-arrow.svg" alt="">
             </div>
-            <div class="project-image-container">
-                <img src="" alt="" class="project-image">
+            <div id="image-box" class="landing-image-container">
+                <img id="name" src="@/assets/landing/Profile.webp" alt="" class="landing-image">
+                <img id="design" src="@/assets/landing/design.png" alt="" class="landing-image">
+                <img id="develop" src="@/assets/landing/develop.png" alt="" class="landing-image">
+                <img id="draw" src="@/assets/landing/illustration.webp" alt="" class="landing-image">
             </div>
         </div>
 
@@ -98,4 +101,40 @@
 <script setup>
     import projectTile from '@/components/projectTile.vue'
     import projectFooter from '@/components/projectFooter.vue'
+    import { onMounted } from 'vue';
+
+    onMounted(() => {
+        function imageHover(p1, p2){
+            const text = document.querySelector(p1);
+            const image = document.getElementById(p2);
+            const imageBox = document.getElementById('image-box');
+
+            document.addEventListener("mousemove", (event) => {
+                const mousePosX = event.clientX;
+                const mousePosY = event.clientY;
+                
+                imageBox.animate({
+                    left: mousePosX +'px',
+                    top: mousePosY + 'px'
+                }, {duration: 300, fill: "forwards"});
+            });
+            
+            if(text){
+                text.addEventListener("mouseover", () => {
+                    image.style.opacity = ".5";
+                    image.style.transform = "scale(1)";
+                });
+
+                text.addEventListener("mouseout", () => {
+                    image.style.opacity = "0";
+                    image.style.transform = "scale(1.5)";
+                });
+            };
+        };
+
+        imageHover(".name", "name");
+        imageHover(".design", "design");
+        imageHover(".develop", "develop");
+        imageHover(".draw", "draw");
+    });
 </script>
