@@ -37,8 +37,9 @@ const router = createRouter({
     routes,
     history: createWebHistory(),
     scrollBehavior (to, from, savedPosition) {
-        return savedPosition || {top:0}
-        return {top:null, left:null, behavior:null}
+        return savedPosition || new Promise((resolve) => {
+            setTimeout(() => resolve({ top:0 }), 500);
+        });
     }
 });
 
