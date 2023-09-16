@@ -88,6 +88,17 @@
     gap: 16px;
 }
 
+.content-hidden{
+    opacity: 0;
+    transform: translate(-100px,0px);
+    transition: all 1s;
+}
+
+.content-reveal{
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+
 // Typography
 .project-subtitle{
     font-family: 'Montserrat', sans-serif;

@@ -2,7 +2,7 @@
     <div>
         <cursor/>
         <div id="element">
-            <header class="project-header">
+            <header class="project-header content-hidden">
                 <h1 class="header-title">CHARM</h1>
                 <img src="@/assets/charm/header.png" alt="" class="header-image">
                 <div class="project-infos">
@@ -22,7 +22,7 @@
                 </div>
             </header>
 
-            <section class="section-container">
+            <section class="section-container content-hidden">
                 <div class="video-wrapper">
                     <!-- Video -->
                     <video class="content-video" autoplay muted loop>
@@ -31,7 +31,7 @@
                 </div>
             </section>
 
-            <section class="section-container">
+            <section class="section-container content-hidden">
                 <div class="project-infos">
                     <div class="col-sub">
                         <h2 class="project-subtitle">Creating a multi-level experience with immersive and engaging media.</h2>
@@ -42,7 +42,7 @@
                 </div>
             </section>
 
-            <section class="section-container">
+            <section class="section-container content-hidden">
                 <div class="col-system mb-36">
                     <div class="col-half">
                         <div class="video-wrapper-sm">
@@ -63,18 +63,18 @@
                 </div>
             </section>
 
-            <section class="section-container">
+            <section class="section-container content-hidden">
                 <h2 class="section-title">BUILDING MY OWN ROUTER TO BREAK THE LIMITS OF VANILLIA HREF ATTRIBUTE.</h2>
             </section>
 
             <section class="section-container">
                 <div class="image-container">
-                    <img src="@/assets/charm/router_code.png" alt="" class="content-image">
-                    <img src="@/assets/charm/navigation.png" alt="" class="content-image">
+                    <img src="@/assets/charm/router_code.png" alt="" class="content-image content-hidden">
+                    <img src="@/assets/charm/navigation.png" alt="" class="content-image content-hidden">
                 </div>
             </section>
 
-            <section class="section-container">
+            <section class="section-container content-hidden">
                 <div class="project-infos">
                     <div class="col-sub">
                         <h2 class="project-subtitle">Integrating a modular workflow to help organize the code.</h2>
@@ -85,22 +85,22 @@
                 </div>
             </section>
 
-            <section class="section-container">
+            <section class="section-container content-hidden">
                 <img src="@/assets/charm/modular_code.png" alt="" class="content-image">
             </section>
 
-            <section class="section-container">
+            <section class="section-container content-hidden">
                 <h2 class="section-title">CONNECTING NETLIFY AND GITHUB TO DIRECTLY DEPLOY TO TEST AND PRODUCTION.</h2>
             </section>
 
-            <section class="section-container">
+            <section class="section-container content-hidden">
                 <img src="@/assets/charm/netlify.png" alt="" class="content-image">
             </section>
 
             <section class="section-container">
-                <h2 class="project-subtitle mb-36">Takeaways and learnings.</h2>
-                <div class="col-system  mb-36">
-                    <div class="takeaway-box">
+                <h2 class="project-subtitle mb-36 content-hidden">Takeaways and learnings.</h2>
+                <div class="col-system mb-36 content-hidden">
+                    <div class="takeaway-box ">
                         <h4 class="detail-title">SCSS variable's is limited when coding responsive.</h4>
                         <p class="detail-description">Variables for SCSS won't be beneficial when coding responsive, but they are still good to include when coding a larger-scale project.</p>
                     </div>
@@ -109,7 +109,7 @@
                         <p class="detail-description">File pathing is important for slugs. If you want a nice-looking URL - create a folder of the respected page name and have an index file within it.</p>
                     </div>
                 </div>
-                <div class="col-system">
+                <div class="col-system content-hidden">
                     <div class="takeaway-box">
                         <h4 class="detail-title">JS optimization is not only performance but readability.</h4>
                         <p class="detail-description">Optimizing JS may only sometimes be good in some situations. Think about readability, time usage, etc. - no need to over-complicate your code.</p>
@@ -122,7 +122,7 @@
             </section>
 
 
-            <router-link class="contact-title-section" :to="{name: 'bright'}">
+            <router-link class="contact-title-section content-hidden" :to="{name: 'bright'}">
                 <h2 class="landing-section-title">NEXT PROJECT!</h2>
                 <div class="scroll-title-container">
                     <div class="scroll-row">
@@ -152,12 +152,30 @@
 <script setup>
     import projectFooter from '@/components/projectFooter.vue'
     import cursor from '@/components/cursor.vue'
-    import { onMounted } from 'vue';
+    import { onMounted, onUnmounted } from 'vue';
     import luxy from 'luxy.js';
 
     onMounted(() => {
         luxy.init({
             wrapper: '#element',
         });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('content-reveal');
+                }
+                else{
+                    entry.target.classList.remove('content-reveal');
+                }
+            })
+        },
+        {
+            threshold: .2,
+        });
+
+        const hiddenElements = document.querySelectorAll(".content-hidden");
+        hiddenElements.forEach((el) => observer.observe(el));
     });
 </script>
