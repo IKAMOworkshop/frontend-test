@@ -4,7 +4,10 @@
         <div id="element">
             <header class="project-header content-hidden">
                 <h1 class="header-title">CHARM</h1>
-                <img src="@/assets/charm/header.png" alt="" class="header-image">
+                <div class="header-image charm">
+                    <a href="https://jeremystudio.cc/#1" target="_blank" class="project-button"><img src="@/assets/right-up-arrow.svg" alt="" class="link-icon"></a>
+                    <a href="https://github.com/IKAMOworkshop/jeremystudio.cc" target="_blank" class="project-button"><img src="@/assets/github-white.svg" alt=""></a>
+                </div>
                 <div class="project-infos">
                     <div class="project-subtitle-box">
                         <h2 class="project-subtitle">A web design and development project for the Spring 2023 ArtCenter Gradshow acting as a portfolio for visitors to browse and discuss design projects.</h2>
