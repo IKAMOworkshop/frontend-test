@@ -2,7 +2,7 @@
     <div>
         <cursor/>
         <div id="element">
-            <header class="about-hero">
+            <header class="about-hero content-hidden">
                 <div class="about-hero-col-1">
                     <div class="absolute">
                         <h1 class="about-title">
@@ -17,7 +17,7 @@
                 </div>
             </header>
 
-            <section class="section-container">
+            <section class="section-container content-hidden">
                 <div class="col-system reverse">
                     <div class="col-main">
                         <h2 class="about-subtitle">I LOVE TO BUILD OUT THE THINGS I'VE DESIGNED.</h2>
@@ -27,7 +27,7 @@
                 </div>
             </section>
 
-            <section class="section-container">
+            <section class="section-container content-hidden">
                 <div class="col-system">
                     <div class="col-half">
                         <div class="image-container" style="height: 800px;">
@@ -48,7 +48,7 @@
                 </div>
             </section>
 
-            <section class="section-container">
+            <section class="section-container content-hidden">
                 <div class="col-system">
                     <div class="col-main">
                         <h2 class="about-subtitle">
@@ -62,8 +62,8 @@
                 </div>
             </section>
 
-            <section class="section-container">
-                <div class="col-system">
+            <section class="section-container content-hidden">
+                <div class="col-system ">
                     <div class="col-half" style="margin-top: 200px;">
                         <div class="model-container" style="height: 1200px;">
 
@@ -83,7 +83,7 @@
                 </div>
             </section>
 
-            <section class="section-container">
+            <section class="section-container content-hidden">
                 <div class="col-system reverse">
                     <div class="col-main">
                         <h2 class="about-subtitle">IT HAS BEEN A WHILE SINCE COVICE, BUT I SPEND A LOT OF TIME TRAVELLING TO JAPAN.</h2>
@@ -93,7 +93,7 @@
                 </div>
             </section>
 
-            <section class="section-container">
+            <section class="section-container content-hidden">
                 <div class="col-system">
                     <div class="col-half">
                         <div class="image-container" style="height: 1400px;">
@@ -103,7 +103,7 @@
                             <img src="@/assets/about/japan_2.png" alt="" class="about-image">
                         </div>
                     </div>
-                    <div class="about-col-half" style="margin-top: 200px;">
+                    <div class="col-half" style="margin-top: 200px;">
                         <div class="image-container" style="height: 800px;">
                             <img src="@/assets/about/japan_3.png" alt="" class="about-image">
                         </div>
@@ -117,7 +117,7 @@
                 </div>
             </section>
 
-            <section class="contact-container">
+            <section class="contact-container content-hidden">
                 <p class="contact-subtitle">
                     Saw something cool?
                     <br />Want to learn more?
@@ -125,7 +125,7 @@
                 </p>
             </section>
             
-            <section class="contact-title-section">
+            <section class="contact-title-section content-hidden">
                 <h2 class="landing-section-title">LET'S CHAT!</h2>
                 <div class="scroll-title-container">
                     <div class="scroll-row">
@@ -147,7 +147,7 @@
                 </div>
             </section>
 
-            <projectFooter />
+            <projectFooter class="content-hidden"/>
         </div>
     </div>
 </template>
@@ -163,6 +163,24 @@
             wrapper: '#element',
             wrapperSpeed: 0.06,
         });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('content-reveal');
+                }
+                else{
+                    entry.target.classList.remove('content-reveal');
+                }
+            })
+        },
+        {
+            threshold: .1,
+        });
+
+        const hiddenElements = document.querySelectorAll(".content-hidden");
+        hiddenElements.forEach((el) => observer.observe(el));
     });
 
     onBeforeUpdate(() => {

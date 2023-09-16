@@ -144,7 +144,7 @@
                 </div>
             </router-link>
 
-            <projectFooter />
+            <projectFooter class="content-hidden"/>
         </div>
     </div>
 </template>
@@ -152,7 +152,7 @@
 <script setup>
     import projectFooter from '@/components/projectFooter.vue'
     import cursor from '@/components/cursor.vue'
-    import { onMounted, onUnmounted } from 'vue';
+    import { onMounted } from 'vue';
     import luxy from 'luxy.js';
 
     onMounted(() => {
@@ -172,7 +172,7 @@
             })
         },
         {
-            threshold: .2,
+            threshold: .1,
         });
 
         const hiddenElements = document.querySelectorAll(".content-hidden");
