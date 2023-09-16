@@ -2,28 +2,28 @@
     <div>
         <cursor/>
         <div id="element">
-            <header class="experience-header">
+            <header class="experience-header content-hidden">
                 <h1 class="large-title">IN MY 8 YEARS OF DESIGN.</h1>
             </header>
 
             <section class="section-container">
-                <h2 class="experience-subtitle">My Learnings</h2>
-                <div class="col-system">
+                <h2 class="experience-subtitle content-hidden">My Learnings</h2>
+                <div class="col-system content-hidden">
                     <learningTile />
                 </div>
             </section>
 
             <section class="section-container">
-                <h2 class="experience-subtitle">My Experience</h2>
-                <div class="row-system">
+                <h2 class="experience-subtitle content-hidden">My Experience</h2>
+                <div class="row-system content-hidden">
                     <experienceTile />
                 </div>
             </section>
 
             <section class="section-container">
-                <h2 class="experience-subtitle">Capability</h2>
-                <div class="col-system">
-                    <capabilityTile/>
+                <h2 class="experience-subtitle content-hidden">Capability</h2>
+                <div class="col-system content-hidden">
+                    <capabilityTile />
                 </div>
             </section>
 
@@ -35,7 +35,7 @@
                 </p>
             </section>
 
-            <section class="contact-title-section">
+            <section class="contact-title-section content-hidden">
                 <h2 class="landing-section-title">LET'S CHAT!</h2>
                 <div class="scroll-title-container">
                     <div class="scroll-row">
@@ -57,7 +57,7 @@
                 </div>
             </section>
 
-            <projectFooter />
+            <projectFooter class="content-hidden"/>
         </div>
     </div>
 </template>
@@ -75,5 +75,23 @@
         luxy.init({
             wrapper: '#element',
         });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('content-reveal');
+                }
+                else{
+                    entry.target.classList.remove('content-reveal');
+                }
+            })
+        },
+        {
+            threshold: .1,
+        });
+
+        const hiddenElements = document.querySelectorAll(".content-hidden");
+        hiddenElements.forEach((el) => observer.observe(el));
     });
 </script>
