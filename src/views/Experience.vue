@@ -27,7 +27,7 @@
                 </div>
             </section>
 
-            <section class="contact-section">
+            <section class="contact-section content-hidden">
                 <p class="contact-subtitle">
                     Saw something cool?
                     <br />Want to learn more?
