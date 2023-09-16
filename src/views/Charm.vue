@@ -147,7 +147,7 @@
                 </div>
             </router-link>
 
-            <projectFooter class="content-hidden"/>
+            <projectFooter />
         </div>
     </div>
 </template>

@@ -68,18 +68,77 @@ nav {
 }
 
 .footer {
+  width: 100%;
   min-width: 100%;
-  padding: 100px 148px 60px 148px;
+  padding: 60px 148px 60px 148px;
+  background-color: rgb(111, 255, 212);
 }
 
-.footer-container {
+.curve-top {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  margin-bottom: -1px;
+}
+
+.curve-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 120px;
+}
+
+.curve-top .shape-fill {
+  fill: #6FFFD4;
+}
+
+.footer-row {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding-top: 8px;
-  align-items: center;
-  border-style: solid;
-  border-width: 1px 0px 0px 0px;
-  border-color: rgb(61, 68, 75);
+  align-items: end;
+}
+
+.footer-up-arrow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-icon {
+  position: absolute;
+  bottom: 180px;
+}
+
+.footer-text-container {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-button {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-copy-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-hidden {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s;
+}
+
+.footer-reveal {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 .router-link {
@@ -90,11 +149,27 @@ nav {
   text-decoration: none;
 }
 
-.footer-text {
+.footer-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: rgb(24, 27, 30);
+  text-decoration: none;
+}
+
+.footer-description {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 0.8rem;
-  color: rgb(112, 126, 139);
+  color: rgb(24, 27, 30);
+  text-decoration: none;
+}
+
+.footer-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: rgb(24, 27, 30);
   text-decoration: none;
 }
 

@@ -147,7 +147,7 @@
                 </div>
             </section>
 
-            <projectFooter class="content-hidden"/>
+            <projectFooter />
         </div>
     </div>
 </template>
