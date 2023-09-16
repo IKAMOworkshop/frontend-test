@@ -8,6 +8,18 @@ nav {
   left: 0;
 }
 
+.landing-home {
+  width: 24px;
+  height: auto;
+  transition: all 0.5s;
+  transform: scale(1);
+}
+
+.landing-home:hover {
+  transform: scale(1.5) rotate(-10deg);
+  color: white;
+}
+
 .nav-group {
   list-style-type: none;
   display: flex;
@@ -17,7 +29,18 @@ nav {
 
 .router-list-item {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.nav-outline {
+  width: 30%;
+  height: 2px;
+  background-color: white;
+  transform-origin: top left;
+  transform: scale(0);
+  transition: all 0.5s;
 }
 
 .nav-link-group {
@@ -37,6 +60,11 @@ nav {
 .social-link {
   width: 20px;
   height: auto;
+  transition: all 0.5s;
+}
+
+.social-link:hover {
+  transform: scale(1.5) rotate(-10deg);
 }
 
 .footer {
@@ -80,8 +108,17 @@ nav {
   gap: 24px;
 }
 
+.hero-hidden {
+  transform: scale(1.2);
+  transition: all 1s;
+}
+
+.hero-reveal {
+  transform: scale(1);
+}
+
 .hero-row {
-  min-width: 800px;
+  min-width: 760px;
   display: flex;
   justify-content: space-between;
 }
@@ -573,10 +610,10 @@ body .transition {
   left: 50%;
   top: 50%;
   translate: -50% -50%;
-  min-width: 32px;
-  max-width: 32px;
-  min-height: 32px;
-  max-height: 32px;
+  min-width: 24px;
+  max-width: 24px;
+  min-height: 24px;
+  max-height: 24px;
   border-radius: 100%;
   border-style: solid;
   border-width: 1px;

@@ -7,6 +7,18 @@ nav{
     left: 0;
 }
 
+.landing-home{
+    width: 24px;
+    height: auto;
+    transition: all .5s;
+    transform: scale(1);
+}
+
+.landing-home:hover{
+    transform: scale(1.5) rotate(-10deg);
+    color: white;
+}
+
 .nav-group{
     list-style-type: none;
     display: flex;
@@ -16,7 +28,18 @@ nav{
 
 .router-list-item{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+.nav-outline{
+    width: 30%;
+    height: 2px;
+    background-color: white;
+    transform-origin: top left;
+    transform: scale(0);
+    transition: all .5s;
 }
 
 .nav-link-group{
@@ -36,6 +59,11 @@ nav{
 .social-link{
     width: 20px;
     height: auto;
+    transition: all .5s;
+}
+
+.social-link:hover{
+    transform: scale(1.5) rotate(-10deg);
 }
 
 // Footer

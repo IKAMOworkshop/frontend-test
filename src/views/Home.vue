@@ -2,7 +2,7 @@
     <div>
         <cursor/>
         <div id="element">
-            <div id="text" class="landing-hero">
+            <div id="text" class="landing-hero hero-hidden">
                 <div class="hero-row">
                     <h1 class="hero-title">HELLO!</h1>
                     <h1 class="hero-title over name">JEREMY</h1>
@@ -19,9 +19,6 @@
                     <h1 class="hero-title">ENJOY</h1>
                     <h1 class="hero-title over draw">DRAWING</h1>
                 </div>
-                <button class="scroll-down">
-                    <img src="@/assets/down-arrow.svg" alt="">
-                </button>
                 <div id="image-box" class="landing-image-container">
                     <img id="name" src="@/assets/landing/Profile.webp" alt="" class="landing-image">
                     <img id="design" src="@/assets/landing/design.png" alt="" class="landing-image">
@@ -29,6 +26,10 @@
                     <img id="draw" src="@/assets/landing/illustration.webp" alt="" class="landing-image">
                 </div>
             </div>
+
+            <button class="scroll-down">
+                    <img src="@/assets/down-arrow.svg" alt="">
+                </button>
 
             <section class="work-title-section">
                 <h2 class="landing-section-title">WORKS.</h2>
@@ -51,9 +52,11 @@
                     </div>
                 </div>
             </section>
+
             <section class="landing-project-section">
                 <projectTile />
             </section>
+
             <section class="contact-subtitle-section">
                 <p class="contact-subtitle">
                     Saw something cool?
@@ -61,6 +64,7 @@
                     <br />Want to learn more?
                 </p>
             </section>
+
             <section class="contact-title-section">
                 <h2 class="landing-section-title">LET'S CHAT!</h2>
                 <div class="scroll-title-container">
@@ -82,6 +86,7 @@
                     </div>
                 </div>
             </section>
+
             <projectFooter />
         </div>
     </div>
@@ -132,6 +137,24 @@
         imageHover(".design", "design");
         imageHover(".develop", "develop");
         imageHover(".draw", "draw");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('hero-reveal');
+                }
+                else{
+                    entry.target.classList.remove('hero-reveal');
+                }
+            })
+        },
+        {
+            threshold: .1,
+        });
+
+        const hiddenHero = document.querySelectorAll(".hero-hidden");
+        hiddenHero.forEach((el) => observer.observe(el));
     });
 
     onBeforeUpdate(() => {

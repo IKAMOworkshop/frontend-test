@@ -8,8 +8,17 @@
     gap: 24px;
 }
 
+.hero-hidden{
+    transform: scale(1.2);
+    transition: all 1s;
+}
+
+.hero-reveal{
+    transform: scale(1);
+}
+
 .hero-row{
-    min-width: 800px;
+    min-width: 760px;
     display: flex;
     justify-content: space-between;
 }
