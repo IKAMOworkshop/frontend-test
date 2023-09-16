@@ -101,7 +101,7 @@
         aboutLink.addEventListener('mouseout', function(){
             aboutOutline.style.transform = "scalex(0)";
             aboutText.animate({
-                color: 'rgb(61,68,75)',
+                color: 'rgb(112,126,139)',
             }, {duration: 500, fill: "forwards"});
         });
 
@@ -115,7 +115,7 @@
         experienceLink.addEventListener('mouseout', function(){
             experienceOutline.style.transform = "scalex(0)";
             experienceText.animate({
-                color: 'rgb(61,68,75)',
+                color: 'rgb(112,126,139)',
             }, {duration: 500, fill: "forwards"});
         });
     });

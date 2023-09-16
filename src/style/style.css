@@ -306,11 +306,30 @@ nav {
 }
 
 .project-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   padding: 16px;
   border-radius: 20px;
   border-style: solid;
   border-width: 1px;
   border-color: rgb(255, 255, 255);
+  transition: all 0.5s;
+}
+
+.project-button:hover {
+  transform: scale(1.2) rotate(-10deg);
+}
+
+.image-hidden, .title-hidden, .description-hidden, .tags-hidden, .button-hidden {
+  transform: translate(-100px);
+  opacity: 0;
+  transition: all 1s;
+}
+
+.image-reveal, .title-reveal, .description-reveal, .tags-reveal, .button-reveal {
+  transform: translate(0px);
+  opacity: 1;
 }
 
 .hero-title {
@@ -341,7 +360,7 @@ nav {
 
 .project-description {
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.8rem;
   color: rgb(112, 126, 139);
   text-decoration: none;

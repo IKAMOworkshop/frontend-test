@@ -1,15 +1,15 @@
 <template>
     <section class="project-section" v-for="project in projects">
-        <div class="project-image-container">
+        <div class="project-image-container image-hidden">
             <img class="project-image" :src="project.cover" alt="">
         </div>
         <div class="detail-container">
-            <h2 class="project-title">{{ project.name }}</h2>
+            <h2 class="project-title title-hidden">{{ project.name }}</h2>
             <div class="project-detail">
-                <strong class="project-description">{{ project.description }}</strong>
-                <p class="project-tags">{{ project.tags }}</p>
+                <strong class="project-description description-hidden">{{ project.description }}</strong>
+                <p class="project-tags tags-hidden">{{ project.tags }}</p>
             </div>
-            <button class="project-button">
+            <button class="project-button button-hidden">
                 <router-link :to="'/'+project.path">
                     <img src="@/assets/right-arrow.svg" alt="">
                 </router-link>
@@ -52,5 +52,98 @@
 </script>
 
 <script setup>
-    import { RouterView } from 'vue-router'
+    import { onMounted } from 'vue';
+    
+    onMounted(() => {
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('image-reveal');
+                }
+                else{
+                    entry.target.classList.remove('image-reveal');
+                }
+            })
+        },
+        {
+            threshold: .1,
+        });
+
+        const hiddenImage = document.querySelectorAll(".image-hidden");
+        hiddenImage.forEach((el) => imageObserver.observe(el));
+
+        const titleObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('title-reveal');
+                }
+                else{
+                    entry.target.classList.remove('title-reveal');
+                }
+            })
+            },
+            {
+                threshold: .1,
+            });
+
+            const hiddenTitle = document.querySelectorAll(".title-hidden");
+            hiddenTitle.forEach((el) => titleObserver.observe(el));
+
+        const descriptionObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('description-reveal');
+                }
+                else{
+                    entry.target.classList.remove('description-reveal');
+                }
+            })
+            },
+            {
+                threshold: .1,
+            });
+
+        const hiddenDescription = document.querySelectorAll(".description-hidden");
+        hiddenDescription.forEach((el) => descriptionObserver.observe(el));
+
+        const tagsObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('tags-reveal');
+                }
+                else{
+                    entry.target.classList.remove('tags-reveal');
+                }
+            })
+            },
+            {
+                threshold: .1,
+            });
+
+        const hiddenTags = document.querySelectorAll(".tags-hidden");
+        hiddenTags.forEach((el) => tagsObserver.observe(el));
+
+        const buttonObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('button-reveal');
+                }
+                else{
+                    entry.target.classList.remove('button-reveal');
+                }
+            })
+            },
+            {
+                threshold: .1,
+            });
+
+        const hiddenButton = document.querySelectorAll(".button-hidden");
+        hiddenButton.forEach((el) => buttonObserver.observe(el));
+    });
+
 </script>

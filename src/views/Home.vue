@@ -27,11 +27,11 @@
                 </div>
             </div>
 
-            <button class="scroll-down">
+            <button class="scroll-down hero-hidden">
                     <img src="@/assets/down-arrow.svg" alt="">
                 </button>
 
-            <section class="work-title-section">
+            <section class="work-title-section content-hidden">
                 <h2 class="landing-section-title">WORKS.</h2>
                 <div class="scroll-title-container">
                     <div class="scroll-row">
@@ -57,7 +57,7 @@
                 <projectTile />
             </section>
 
-            <section class="contact-subtitle-section">
+            <section class="contact-subtitle-section content-hidden">
                 <p class="contact-subtitle">
                     Saw something cool?
                     <br /> or
@@ -65,7 +65,7 @@
                 </p>
             </section>
 
-            <section class="contact-title-section">
+            <section class="contact-title-section content-hidden">
                 <h2 class="landing-section-title">LET'S CHAT!</h2>
                 <div class="scroll-title-container">
                     <div class="scroll-row">
@@ -87,7 +87,7 @@
                 </div>
             </section>
 
-            <projectFooter />
+            <projectFooter class="content-hidden"/>
         </div>
     </div>
 </template>
@@ -155,6 +155,24 @@
 
         const hiddenHero = document.querySelectorAll(".hero-hidden");
         hiddenHero.forEach((el) => observer.observe(el));
+
+        const contentObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('content-reveal');
+                }
+                else{
+                    entry.target.classList.remove('content-reveal');
+                }
+            })
+        },
+        {
+            threshold: .1,
+        });
+
+        const hiddenElements = document.querySelectorAll(".content-hidden");
+        hiddenElements.forEach((el) => contentObserver.observe(el));
     });
 
     onBeforeUpdate(() => {
