@@ -13,7 +13,13 @@
                         <div id="experience-outline" class="nav-outline"></div>
                     </li>
                     <ul class="social-link-group">
-                        <li><button><img src="@/assets/mail.svg" alt="" class="social-link"></button></li>
+                        <li class="email-container">
+                            <button id="nav-email"><img src="@/assets/mail.svg" alt="" class="social-link"></button>
+                            <div id="copy-message-container" class="copy-message-container">
+                                <p id="copied-success" class="copy-message">Email copied!</p>
+                                <p class="copy-message">Oops, can't copy!</p>
+                            </div>
+                        </li>
                         <li><a href="https://github.com/IKAMOworkshop" target="_blank"><img src="@/assets/github.svg" alt="" class="social-link"></a></li>
                         <li><a href="https://www.linkedin.com/in/jeremystudio/" target="_blank"><img src="@/assets/linkedin.svg" alt="" class="social-link"></a></li>
                     </ul>
@@ -118,6 +124,42 @@
                 color: 'rgb(112,126,139)',
             }, {duration: 500, fill: "forwards"});
         });
+
+        const copyMessage = document.getElementById('copy-message-container');
+
+        document.addEventListener("mousemove", (event) => {
+            const mousePosX = event.clientX;
+            const mousePosY = event.clientY;
+            
+        copyMessage.animate({
+            left: mousePosX +'px',
+            top: mousePosY + 'px'
+        }, {duration: 300, fill: "forwards"});
+        });
+
+        const emailButton = document.getElementById('nav-email');
+        const successMessage = document.getElementById('copied-success')
+        const failedMessage = document.getElementById('copy-failed');
+
+        function copyEmail() {
+            navigator.clipboard.writeText("changjeremy0226@gmail.com").then(() => {
+                console.log('Content copied to clipboard');
+                successMessage.style.opacity = "1";
+                setTimeout(() => {
+                    successMessage.style.opacity = "0";
+                }, 5000);
+                /* Resolved - text copied to clipboard successfully */
+            },() => {
+                console.error('Failed to copy');
+                failedMessage.style.opacity = "1";
+                setTimeout(() => {
+                    failedMessage.style.opacity = "0";
+                }, 5000);
+                /* Rejected - text failed to copy to the clipboard */
+            });
+        }
+
+        emailButton.addEventListener('click', copyEmail);
     });
 </script>
 

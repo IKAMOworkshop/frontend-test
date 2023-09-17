@@ -67,6 +67,19 @@ nav {
   transform: scale(1.5) rotate(-10deg);
 }
 
+.email-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copy-message-container {
+  width: 200px;
+  position: absolute;
+  margin: 0px 0px 0px 16px;
+  margin-top: 20px;
+}
+
 .footer {
   width: 100%;
   min-width: 100%;
@@ -121,6 +134,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  text-decoration: none;
 }
 
 .footer-copy-right {
@@ -171,6 +185,16 @@ nav {
   font-size: 3rem;
   color: rgb(24, 27, 30);
   text-decoration: none;
+}
+
+.copy-message {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: rgb(112, 126, 139);
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .landing-hero {

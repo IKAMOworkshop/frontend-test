@@ -27,9 +27,9 @@
                 </div>
             </div>
 
-            <button class="scroll-down hero-hidden">
-                    <img src="@/assets/down-arrow.svg" alt="">
-                </button>
+            <button id="down-button" class="scroll-down hero-hidden">
+                <img src="@/assets/down-arrow.svg" alt="">
+            </button>
 
             <section class="work-title-section content-hidden">
                 <h2 class="landing-section-title">WORKS.</h2>
@@ -53,7 +53,7 @@
                 </div>
             </section>
 
-            <section class="landing-project-section">
+            <section id="project-section" ref="targetRef" class="landing-project-section">
                 <projectTile />
             </section>
 
@@ -97,7 +97,7 @@
     import projectTile from '@/components/projectTile.vue'
     import projectFooter from '@/components/projectFooter.vue'
     import cursor from '@/components/cursor.vue'
-    import { onMounted, onBeforeUpdate, onUpdated } from 'vue';
+    import { onMounted, onBeforeUpdate, onUpdated, ref, nextTick } from 'vue';
 
     onMounted(() => {
         luxy.init({
@@ -137,6 +137,17 @@
         imageHover(".design", "design");
         imageHover(".develop", "develop");
         imageHover(".draw", "draw");
+
+        const downButton = document.getElementById('down-button');
+        const projectTarget = document.getElementById('project-section');
+
+        function handleClick(){
+            nextTick(() => {
+                projectTarget.scrollIntoView({behavior: 'smooth'});
+            });
+        };
+
+        downButton.addEventListener('click', handleClick);
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {

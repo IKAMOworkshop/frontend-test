@@ -6,18 +6,24 @@
             </svg>
         </div>
         <footer class="footer">
-            <button class="footer-up-arrow">
+            <button id="up-button" class="footer-up-arrow">
                 <img src="@/assets/up-arrow.svg" alt="" class="footer-icon">
             </button>
             <div class="footer-row">
                 <div class="footer-text-container">
-                    <button class="footer-button">
+                    <button id="footer-email" class="footer-button">
                         <h3 class="footer-title">GET IN TOUCH</h3>
                         <p class="footer-text">my email.</p>
                     </button>
+                    <div id="copy-message-container" class="copy-message-container">
+                        <p id="copied-success" class="copy-message">Email copied!</p>
+                        <p class="copy-message">Oops, can't copy!</p>
+                    </div>
                     <button class="footer-button">
-                        <h3 class="footer-title">GET IN TOUCH</h3>
-                        <p class="footer-text">my email.</p>
+                        <router-link class="footer-button" to="/about">
+                            <h3 class="footer-title">FIND OUT MORE</h3>
+                            <p class="footer-text">about me.</p>
+                        </router-link>
                     </button>
                 </div>
                 <div class="footer-text-container">
@@ -52,5 +58,29 @@
 
         const hiddenFooter = document.querySelectorAll(".footer-hidden");
         hiddenFooter.forEach((el) => observer.observe(el));
+
+        const emailButton = document.getElementById('footer-email');
+        const successMessage = document.getElementById('copied-success')
+        const failedMessage = document.getElementById('copy-failed');
+
+        function copyEmail() {
+            navigator.clipboard.writeText("changjeremy0226@gmail.com").then(() => {
+                console.log('Content copied to clipboard');
+                successMessage.style.opacity = "1";
+                setTimeout(() => {
+                    successMessage.style.opacity = "0";
+                }, 5000);
+                /* Resolved - text copied to clipboard successfully */
+            },() => {
+                console.error('Failed to copy');
+                failedMessage.style.opacity = "1";
+                setTimeout(() => {
+                    failedMessage.style.opacity = "0";
+                }, 5000);
+                /* Rejected - text failed to copy to the clipboard */
+            });
+        }
+
+        emailButton.addEventListener('click', copyEmail);
     });
 </script>
