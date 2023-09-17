@@ -6,23 +6,27 @@
             </svg>
         </div>
         <footer class="footer">
-            <button id="up-button" class="footer-up-arrow">
-                <img src="@/assets/up-arrow.svg" alt="" class="footer-icon">
+            <button class="footer-up-arrow">
+                <div id="up-button" class="footer-icon">
+                    <img id="up-icon" src="@/assets/up-arrow.svg" alt="">
+                </div>
             </button>
             <div class="footer-row">
                 <div class="footer-text-container">
                     <button id="footer-email" class="footer-button">
                         <h3 class="footer-title">GET IN TOUCH</h3>
                         <p class="footer-text">my email.</p>
+                        <div id="email-outline" class="footer-outline"></div>
                     </button>
                     <div id="copy-message-container" class="copy-message-container">
                         <p id="copied-success" class="copy-message">Email copied!</p>
                         <p class="copy-message">Oops, can't copy!</p>
                     </div>
-                    <button class="footer-button">
+                    <button id="footer-about" class="footer-button">
                         <router-link class="footer-button" to="/about">
                             <h3 class="footer-title">FIND OUT MORE</h3>
                             <p class="footer-text">about me.</p>
+                            <div id="about-baseline" class="footer-outline"></div>
                         </router-link>
                     </button>
                 </div>
@@ -60,6 +64,7 @@
         hiddenFooter.forEach((el) => observer.observe(el));
 
         const emailButton = document.getElementById('footer-email');
+        const aboutButton = document.getElementById('footer-about');
         const successMessage = document.getElementById('copied-success')
         const failedMessage = document.getElementById('copy-failed');
 
@@ -82,5 +87,34 @@
         }
 
         emailButton.addEventListener('click', copyEmail);
+
+        const emailOutline = document.getElementById('email-outline');
+        const aboutOutline = document.getElementById('about-baseline');
+
+        emailButton.addEventListener('mouseover', () => {
+            emailOutline.style.transform = "scalex(1)";
+        });
+
+        emailButton.addEventListener('mouseout', () => {
+            emailOutline.style.transform = "scalex(0)";
+        });
+
+        aboutButton.addEventListener('mouseover', () => {
+            aboutOutline.style.transform = "scalex(1)";
+        });
+
+        aboutButton.addEventListener('mouseout', () => {
+            aboutOutline.style.transform = "scalex(0)";
+        });
+
+        const upButton = document.getElementById('up-button');
+
+        upButton.addEventListener('mouseover', () => {
+            upButton.style.borderColor = "#181B1E";
+        });
+
+        upButton.addEventListener('mouseout', () => {
+            upButton.style.borderColor = "#6FFFD4";
+        })
     });
 </script>
