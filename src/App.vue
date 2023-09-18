@@ -2,7 +2,7 @@
     <div>
         <nav>
             <ul class="nav-group">
-                <li><button><router-link to="/" class="router-link"><img src="@/assets/mock-logo.svg" alt="" class="landing-home"></router-link></button></li>
+                <li><button><router-link to="/" class="router-link"><img src="@/assets/logo.svg" alt="" class="landing-home"></router-link></button></li>
                 <div class="nav-link-group">
                     <li id="about-link" class="router-list-item">
                         <button><router-link to="/about" class="router-link" id="about-text">About.</router-link></button>
