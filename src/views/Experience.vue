@@ -6,6 +6,10 @@
                 <h1 class="large-title">IN MY 8 YEARS OF DESIGN.</h1>
             </header>
 
+            <button id="down-button" class="scroll-down-experience">
+                <img src="@/assets/down-arrow.svg" alt="">
+            </button>
+
             <section class="section-container">
                 <h2 class="experience-subtitle content-hidden">My Learnings</h2>
                 <div class="col-system content-hidden">

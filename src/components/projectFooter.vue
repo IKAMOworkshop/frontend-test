@@ -115,6 +115,6 @@
 
         upButton.addEventListener('mouseout', () => {
             upButton.style.borderColor = "#6FFFD4";
-        })
+        });
     });
 </script>

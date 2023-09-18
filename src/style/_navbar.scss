@@ -145,7 +145,7 @@ nav{
     text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
     text-decoration: none;
 }
 
@@ -169,8 +169,8 @@ nav{
 
 .footer-outline{
     position: absolute;
-    width: 10%;
-    height: 4px;
+    width: 80px;
+    height: 2px;
     background-color: rgba(24, 27, 30, 1);
     margin-top: 80px;
     transform-origin: top left;

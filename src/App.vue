@@ -12,6 +12,10 @@
                         <button><router-link to="/experience" class="router-link" id="experience-text">Experience.</router-link></button>
                         <div id="experience-outline" class="nav-outline"></div>
                     </li>
+                    <li id="contact-link" class="router-list-item">
+                        <button><router-link to="/contact" class="router-link" id="contact-text">Contact.</router-link></button>
+                        <div id="contact-outline" class="nav-outline"></div>
+                    </li>
                     <ul class="social-link-group">
                         <li class="email-container">
                             <button id="nav-email"><img src="@/assets/mail.svg" alt="" class="social-link"></button>
@@ -96,6 +100,9 @@
         const experienceLink = document.getElementById('experience-link');
         const experienceOutline = document.getElementById('experience-outline');
         const experienceText = document.getElementById('experience-text');
+        const contactLink = document.getElementById('contact-link');
+        const contactOutline = document.getElementById('contact-outline');
+        const contactText = document.getElementById('contact-text');
 
         aboutLink.addEventListener('mouseover', function(){
             aboutOutline.style.transform = "scalex(1)";
@@ -121,6 +128,20 @@
         experienceLink.addEventListener('mouseout', function(){
             experienceOutline.style.transform = "scalex(0)";
             experienceText.animate({
+                color: 'rgb(112,126,139)',
+            }, {duration: 500, fill: "forwards"});
+        });
+
+        contactLink.addEventListener('mouseover', function(){
+            contactOutline.style.transform = "scalex(1)";
+            contactText.animate({
+                color: 'rgb(255,255,255)',
+            }, {duration: 500, fill: "forwards"});
+        });
+        
+        contactLink.addEventListener('mouseout', function(){
+            contactOutline.style.transform = "scalex(0)";
+            contactText.animate({
                 color: 'rgb(112,126,139)',
             }, {duration: 500, fill: "forwards"});
         });
