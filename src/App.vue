@@ -190,6 +190,6 @@
     }
 
     .fade-enter-active, .fade-leave-active{
-        transition: all 0.5s ease-out;
+        transition: all .5s ease-out;
     }
 </style>

@@ -19,6 +19,7 @@
     onMounted(() => {
         luxy.init({
             wrapper: '#element',
+            wrapperSpeed: 0.06,
         });
     });
 </script>
