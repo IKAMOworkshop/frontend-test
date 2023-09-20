@@ -3,27 +3,27 @@
         <cursor/>
         <div id="element">
             <div id="text" class="landing-hero hero-hidden">
-                <div class="hero-row">
-                    <h1 class="hero-title">HELLO!</h1>
+                <div class="hero-row first">
+                    <h1 class="hero-title over hello">HELLO</h1>
+                    <h1 class="hero-title hero-title-support"> YOU!</h1>
+                </div>
+                <div class="hero-row second">
+                    <h1 class="hero-title hero-title-support">I'M</h1>
                     <h1 class="hero-title over name">JEREMY</h1>
                 </div>
-                <div class="hero-row">
-                    <h1 class="hero-title">I</h1>
-                    <h1 class="hero-title over design">DESIGN</h1>
+                <div class="hero-row third">
+                    <h1 class="hero-title hero-title-support">A</h1>
+                    <h1 class="hero-title over design">DESIGNER</h1>
                 </div>
-                <div class="hero-row">
-                    <h1 class="hero-title over develop">DEVELOP</h1>
-                    <h1 class="hero-title">&</h1>
-                </div>
-                <div class="hero-row">
-                    <h1 class="hero-title">ENJOY</h1>
-                    <h1 class="hero-title over draw">DRAWING</h1>
+                <div class="hero-row fourth">
+                    <h1 class="hero-title hero-title-support">THAT</h1>
+                    <h1 class="hero-title over develop">BUILD</h1>
                 </div>
                 <div id="image-box" class="landing-image-container">
                     <img id="name" src="@/assets/landing/Profile.webp" alt="" class="landing-image">
                     <img id="design" src="@/assets/landing/design.png" alt="" class="landing-image">
                     <img id="develop" src="@/assets/landing/develop.png" alt="" class="landing-image">
-                    <img id="draw" src="@/assets/landing/illustration.webp" alt="" class="landing-image">
+                    <img id="hello" src="@/assets/landing/hello.jpg" alt="" class="landing-image">
                 </div>
             </div>
 
@@ -97,7 +97,7 @@
     import projectTile from '@/components/projectTile.vue'
     import projectFooter from '@/components/projectFooter.vue'
     import cursor from '@/components/cursor.vue'
-    import { onMounted, onBeforeUpdate, onUpdated, ref, nextTick } from 'vue';
+    import { onMounted, nextTick } from 'vue';
 
     onMounted(() => {
         luxy.init({
@@ -117,7 +117,7 @@
                 imageBox.animate({
                     left: mousePosX +'px',
                     top: mousePosY + 'px'
-                }, {duration: 300, fill: "forwards"});
+                }, {duration: 2000, fill: "forwards"});
             });
             
             if(text){
@@ -136,7 +136,7 @@
         imageHover(".name", "name");
         imageHover(".design", "design");
         imageHover(".develop", "develop");
-        imageHover(".draw", "draw");
+        imageHover(".hello", "hello");
 
         const downButton = document.getElementById('down-button');
         const projectTarget = document.getElementById('project-section');
@@ -184,19 +184,5 @@
 
         const hiddenElements = document.querySelectorAll(".content-hidden");
         hiddenElements.forEach((el) => contentObserver.observe(el));
-    });
-
-    onBeforeUpdate(() => {
-        luxy.init({
-            wrapper: '#element',
-            wrapperSpeed: 0.06,
-        });
-    });
-
-    onUpdated(() => {
-        luxy.init({
-            wrapper: '#element',
-            wrapperSpeed: 0.06,
-        });
     });
 </script>

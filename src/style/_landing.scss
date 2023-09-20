@@ -18,9 +18,24 @@
 }
 
 .hero-row{
-    min-width: 760px;
     display: flex;
-    justify-content: space-between;
+    gap: 36px;
+}
+
+.landing-hero > .first{
+    margin-right: 400px;
+}
+
+.landing-hero > .second{
+    margin-left: 500px;
+}
+
+.landing-hero > .third{
+    margin-right: 360px;
+}
+
+.landing-hero > .fourth{
+    margin-left: 300px;
 }
 
 #text:has(.over:hover) .hero-title:not(.over:hover) {
@@ -236,10 +251,19 @@
 .hero-title{
     font-family: 'MuseoModerno', cursive;
     font-weight: 700;
-    font-size: 5rem;
+    font-size: 8rem;
     color: rgba(255,255,255,1);
     text-decoration: none;
     transition: all 1s;
+}
+
+.hero-title-support{
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 200;
+    font-size: 8rem;
+    font-style: italic;
+    color: rgba(255,255,255,1);
+    text-decoration: none;
 }
 
 .landing-section-title, .project-title{
