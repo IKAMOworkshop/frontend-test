@@ -1,21 +1,23 @@
 <template>
-    <section class="project-section" v-for="project in projects">
+    <div class="project-section" v-for="project in projects">
         <div class="project-image-container image-hidden">
             <img class="project-image" :src="project.cover" alt="">
         </div>
         <div class="detail-container">
             <h2 class="project-title title-hidden">{{ project.name }}</h2>
-            <div class="project-detail">
-                <strong class="project-description description-hidden">{{ project.description }}</strong>
-                <p class="project-tags tags-hidden">{{ project.tags }}</p>
+            <div class="support-wrapper">
+                <div class="project-detail">
+                    <strong class="project-description description-hidden">{{ project.description }}</strong>
+                    <p class="project-tags tags-hidden">{{ project.tags }}</p>
+                </div>
+                <button class="project-button button-hidden">
+                    <router-link :to="'/'+project.path">
+                        <img src="@/assets/right-arrow.svg" alt="">
+                    </router-link>
+                </button>
             </div>
-            <button class="project-button button-hidden">
-                <router-link :to="'/'+project.path">
-                    <img src="@/assets/right-arrow.svg" alt="">
-                </router-link>
-            </button>
         </div>
-    </section>
+    </div>
 </template>
 
 <script>

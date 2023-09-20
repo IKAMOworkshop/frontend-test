@@ -227,3 +227,47 @@ nav{
     50% { transform: translateY(100px);}
     100% { transform: translate(-50%);}
 }
+
+// Responsive
+
+@media screen and (max-width: 1024px){
+    .footer{
+        padding: 24px 36px 36px 36px;
+    }
+    .footer-icon{
+        bottom: 140px;
+    }
+    .footer-text-container{
+        gap: 24px;
+    }
+    .footer-text{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-link-group{
+        gap: 16px;
+    }
+    .social-link-group{
+        gap: 8px;
+    }
+    .footer{
+        padding: 0px 36px 36px 36px;
+    }
+    .footer-icon{
+        bottom: 100px;
+    }
+    .footer-text-container{
+        gap: 16px;
+    }
+    .footer-button{
+        gap: 4px;
+    }
+    .footer-title{
+        font-size: .6rem;
+    }
+    .footer-text{
+        font-size: 1rem;
+    }
+}
