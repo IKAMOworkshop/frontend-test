@@ -1,6 +1,6 @@
 .about-hero {
     min-width: 100%;
-    padding: 100px 148px 0px 148px;
+    padding: 120px 148px 0px 148px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,6 +34,30 @@
 
 .image-container{
     width: 100%;
+}
+
+.image-1{
+    height: 800px;
+}
+
+.image-2{
+    height: 600px;
+}
+
+.image-3{
+    height: 800px;
+}
+
+.image-4{
+    height: 600px;
+}
+
+.image-5{
+    height: 1400px;
+}
+
+.margin-offset{
+    margin-top: 200px;
 }
 
 .about-image{
@@ -73,4 +97,98 @@
     text-decoration: none;
     line-height: 1.8rem;
     width: 480px;
+}
+
+// Responsive
+@media screen and (max-width: 1280px){
+    .about-hero{
+        align-items: start;
+        margin-bottom: 100px;
+    }
+    .about-title{
+        font-size: 5rem;
+    }
+    .about-hero-col-2{
+        width: 70%;
+        height: 720px;
+    }
+    .about-hero-col-1{
+        height: 720px;
+    }
+    .about-subtitle{
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+    .image-1{
+        height: 400px;
+    }
+    
+    .image-2{
+        height: 200px;
+    }
+    
+    .image-3{
+        height: 400px;
+    }
+    
+    .image-4{
+        height: 200px;
+    }
+    .image-5{
+        height: 600px;
+    }
+    .margin-offset{
+        margin-top: 140px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-hero{
+        padding: 120px 36px 0px 36px;
+    }
+    .about-hero-col-2{
+        height: 600px;
+    }
+    .about-hero-col-1{
+        height: 600px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-hero{
+        flex-direction: column-reverse;
+        margin-bottom: 80px;
+    }
+    .about-hero-col-1{
+        width: 100%;
+        height: auto;
+    }
+    .about-hero-col-2{
+        width: 100%;
+        height: 400px;
+    }
+    .absolute{
+        position: static;
+        gap: 24px;
+    }
+    .about-title{
+        font-size: 3rem;
+        margin-top: -24px;
+    }
+    .about-description{
+        width: 100%;
+    }
+    .about-subtitle{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .margin-offset{
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .about-title{
+        margin-top: 16px;
+    }
 }

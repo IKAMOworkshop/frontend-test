@@ -7,7 +7,7 @@
                     <div class="absolute">
                         <h1 class="about-title">
                             HELLO THERE!
-                            <br />  I AM JEREMY
+                            <br />  I'M JEREMY
                         </h1>
                         <p class="about-description">I’m a designer who love to explore and pull from multiple fields to craft the unexpected.</p>
                     </div>
@@ -30,18 +30,18 @@
             <section class="section-container content-hidden">
                 <div class="col-system">
                     <div class="col-half">
-                        <div class="image-container" style="height: 800px;">
+                        <div class="image-container image-1">
                             <img src="@/assets/about/desk.png" alt="" class="about-image">
                         </div>
-                        <div class="image-container" style="height: 600px;">
+                        <div class="image-container image-2">
                             <img src="@/assets/about/prototype.png" alt="" class="about-image">
                         </div>
                     </div>
-                    <div class="col-half" style="margin-top: 200px;">
-                        <div class="image-container" style="height: 800px;">
+                    <div class="col-half margin-offset">
+                        <div class="image-container image-3">
                             <img src="@/assets/about/robot_model.png" alt="" class="about-image">
                         </div>
-                        <div class="image-container" style="height: 600px;">
+                        <div class="image-container image-4">
                             <img src="@/assets/about/gradshow_building.png" alt="" class="about-image">
                         </div>
                     </div>
@@ -64,19 +64,19 @@
 
             <section class="section-container content-hidden">
                 <div class="col-system ">
-                    <div class="col-half" style="margin-top: 200px;">
-                        <div class="model-container" style="height: 1200px;">
+                    <div class="col-half margin-offset">
+                        <div class="model-container image-5">
 
                         </div>
-                        <div class="model-container" style="height: 600px;">
+                        <div class="model-container image-2">
 
                         </div>
                     </div>
                     <div class="col-half">
-                        <div class="model-container" style="height: 800px;">
+                        <div class="model-container image-1" >
 
                         </div>
-                        <div class="model-container" style="height: 800px;">
+                        <div class="model-container image-3">
 
                         </div>
                     </div>
@@ -96,21 +96,21 @@
             <section class="section-container content-hidden">
                 <div class="col-system">
                     <div class="col-half">
-                        <div class="image-container" style="height: 1400px;">
+                        <div class="image-container image-5">
                             <img src="@/assets/about/japan_1.png" alt="" class="about-image">
                         </div>
-                        <div class="image-container" style="height: 800px;">
+                        <div class="image-container image-1">
                             <img src="@/assets/about/japan_2.png" alt="" class="about-image">
                         </div>
                     </div>
-                    <div class="col-half" style="margin-top: 200px;">
-                        <div class="image-container" style="height: 800px;">
+                    <div class="col-half margin-offset">
+                        <div class="image-container image-3">
                             <img src="@/assets/about/japan_3.png" alt="" class="about-image">
                         </div>
-                        <div class="image-container" style="height: 600px;">
+                        <div class="image-containerimage-2">
                             <img src="@/assets/about/japan_4.png" alt="" class="about-image">
                         </div>
-                        <div class="image-container" style="height: 800px;">
+                        <div class="image-container image-3">
                             <img src="@/assets/about/japan_5.png" alt="" class="about-image">
                         </div>
                     </div>

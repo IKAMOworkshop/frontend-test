@@ -271,3 +271,12 @@ nav{
         font-size: 1rem;
     }
 }
+
+@media screen and (max-width: 420px) {
+    .social-link-group{
+        display: none;
+    }
+    .footer-copy-right{
+        width: 100px;
+    }
+}

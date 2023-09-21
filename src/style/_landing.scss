@@ -472,7 +472,6 @@
     .landing-hero > .second{
         margin-left: 100px;
     }
-    
     .landing-hero > .third{
         margin-right: 50px;
     }
@@ -501,5 +500,47 @@
     }
     .project-button{
         margin-top: -16px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .landing-hero{
+        gap: 8px;
+    }
+    .hero-row{
+        gap: 8px;
+    }
+    .hero-title{
+        font-size: 2rem;
+    }
+    .hero-title-support{
+        font-size: 2rem;
+    }
+    .landing-hero > .first{
+        margin-right: 80px;
+    }
+    
+    .landing-hero > .second{
+        margin-left: 100px;
+    }
+    .landing-hero > .third{
+        margin-right: 50px;
+    }
+    .landing-hero > .fourth{
+        margin-left: 40px;
+    }
+    .scroll-down{
+        display: none;
+    }
+    .work-title-section{
+        padding: 0px 36px 160px 36px;
+    }
+    .project-title{
+        margin-top: -24px;
+        font-size: 3rem;
+    }
+    .project-description{
+        font-size: .8rem;
+        width: 180px;
     }
 }
