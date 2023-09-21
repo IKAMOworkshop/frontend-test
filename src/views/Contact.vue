@@ -3,11 +3,11 @@
         <cursor/>
         <div id="element">
             <header class="contact-header mb-160">
-                <h1 class="large-title">FEEL FREE TO REACHOUT!</h1>
+                <h1 class="large-title">CONTACT!</h1>
             </header>
 
-            <section class="section-container ">
-                <div class="footer-text-container">
+            <section class="contact-section-container">
+                <div class="contact-text-container">
                     <button id="email-button" class="footer-button">
                         <h3 class="contact-title">GET IN TOUCH</h3>
                         <p class="contact-text">my email.</p>
@@ -29,8 +29,8 @@
                     </a>
                 </div>
             </section>
-            <div class="accent-circle"></div>
         </div>
+        <div class="accent-circle"></div>
     </div>
 </template>
 
