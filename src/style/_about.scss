@@ -104,15 +104,21 @@
     .about-hero{
         align-items: start;
         margin-bottom: 100px;
+        padding: 120px 36px 0px 36px;
     }
     .about-title{
-        font-size: 5rem;
+        font-size: 6rem;
+    }
+    .about-description{
+        font-size: 1.5rem;
+        width: 400px;
     }
     .about-hero-col-2{
-        width: 70%;
+        width: 50%;
         height: 720px;
     }
     .about-hero-col-1{
+        width: 50%;
         height: 720px;
     }
     .about-subtitle{
