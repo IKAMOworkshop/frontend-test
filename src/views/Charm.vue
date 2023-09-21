@@ -1,6 +1,6 @@
 <template>
     <div>
-        <cursor />
+        <cursor style="opacity: 0"/>
         <div id="element">
             <header class="project-header content-hidden">
                 <h1 class="header-title">CHARM</h1>

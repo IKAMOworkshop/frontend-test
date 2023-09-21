@@ -1,6 +1,6 @@
 <template>
     <div>
-        <cursor />
+        <cursor style="opacity: 0"/>
         <div id="element">
             <div id="text" class="landing-hero hero-hidden">
                 <div class="hero-row first">

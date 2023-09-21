@@ -1,6 +1,6 @@
 <template>
     <div>
-        <cursor />
+        <cursor style="opacity: 0"/>
         <div id="element">
             <header class="experience-header content-hidden">
                 <h1 class="large-title">IN MY 8 YEARS OF DESIGN.</h1>

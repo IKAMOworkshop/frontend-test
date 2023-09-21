@@ -1,6 +1,6 @@
 <template>
     <div>
-        <cursor />
+        <cursor style="opacity: 0"/>
         <div id="element">
             <header class="experience-header">
                 <h1 class="experience-title">BRIGHT</h1>

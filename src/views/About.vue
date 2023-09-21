@@ -1,6 +1,6 @@
 <template>
     <div>
-        <cursor />
+        <cursor style="opacity: 0"/>
         <div id="element">
             <header class="about-hero content-hidden">
                 <div class="about-hero-col-1">
@@ -65,10 +65,10 @@
             <section class="section-container content-hidden">
                 <div class="col-system ">
                     <div class="col-half margin-offset">
-                        <div class="model-container image-5">
+                        <div class="model-container image-1">
 
                         </div>
-                        <div class="model-container image-2">
+                        <div class="model-container image-3">
 
                         </div>
                     </div>
