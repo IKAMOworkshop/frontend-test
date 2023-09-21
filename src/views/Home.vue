@@ -1,5 +1,6 @@
 <template>
     <div>
+        <cursor />
         <div id="element">
             <div id="text" class="landing-hero hero-hidden">
                 <div class="hero-row first">
@@ -92,6 +93,7 @@
 </template>
 
 <script setup>
+    import cursor from '@/components/cursor.vue';
     import projectTile from '@/components/projectTile.vue'
     import projectFooter from '@/components/projectFooter.vue'
     import { onMounted, nextTick } from 'vue';

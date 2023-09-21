@@ -4,8 +4,8 @@
             <header class="project-header content-hidden">
                 <h1 class="header-title">CHARM</h1>
                 <div class="header-image charm">
-                    <a href="https://jeremystudio.cc/#1" target="_blank" class="project-button"><img src="@/assets/right-up-arrow.svg" alt="" class="link-icon"></a>
-                    <a href="https://github.com/IKAMOworkshop/jeremystudio.cc" target="_blank" class="project-button"><img src="@/assets/github-white.svg" alt=""></a>
+                    <a href="https://jeremystudio.cc/#1" target="_blank" class="external-button"><img src="@/assets/right-up-arrow.svg" alt="" class="link-icon"></a>
+                    <a href="https://github.com/IKAMOworkshop/jeremystudio.cc" target="_blank" class="external-button"><img src="@/assets/github-white.svg" alt=""></a>
                 </div>
                 <div class="project-infos">
                     <div class="project-subtitle-box">
@@ -35,7 +35,7 @@
 
             <section class="section-container content-hidden">
                 <div class="project-infos">
-                    <div class="col-sub">
+                    <div class="col-title">
                         <h2 class="project-subtitle">Creating a multi-level experience with immersive and engaging media.</h2>
                     </div>
                     <div class="col-half">
@@ -78,7 +78,7 @@
 
             <section class="section-container content-hidden">
                 <div class="project-infos">
-                    <div class="col-sub">
+                    <div class="col-title">
                         <h2 class="project-subtitle">Integrating a modular workflow to help organize the code.</h2>
                     </div>
                     <div class="col-half">

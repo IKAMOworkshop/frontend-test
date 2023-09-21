@@ -1407,6 +1407,18 @@ body .transition {
   border-radius: 40px;
 }
 
+.external-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255);
+  transition: all 0.5s;
+}
+
 .project-infos {
   width: 100%;
   display: flex;
@@ -1425,6 +1437,10 @@ body .transition {
 
 .text-gap {
   gap: 8px;
+}
+
+.col-title {
+  width: 30%;
 }
 
 .video-wrapper {
@@ -1516,6 +1532,166 @@ body .transition {
   width: 90%;
 }
 
+@media screen and (max-width: 1280px) {
+  .project-header {
+    padding: 100px 36px 0px 36px;
+  }
+  .header-title {
+    font-size: 10rem;
+    margin-left: 40px;
+  }
+  .header-image {
+    height: 600px;
+    margin-top: 100px;
+    padding: 36px;
+  }
+  .project-subtitle-box {
+    width: 60%;
+  }
+  .project-info {
+    width: 30%;
+  }
+  .project-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+  .detail-title {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+  .detail-description {
+    font-size: 0.8rem;
+  }
+  .video-wrapper {
+    height: 540px;
+  }
+  .video-wrapper-sm {
+    height: 240px;
+  }
+  .section-title {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+  .takeaway-box {
+    padding: 48px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .project-header {
+    margin-bottom: 100px;
+  }
+  .header-image {
+    height: 520px;
+    padding: 36px;
+  }
+  .project-info {
+    gap: 8px;
+  }
+  .video-wrapper {
+    height: 400px;
+  }
+  .video-wrapper-sm {
+    height: 200px;
+  }
+  .col-title {
+    width: 40%;
+  }
+  .section-title {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .takeaway-box {
+    padding: 36px;
+  }
+  .mb-36 {
+    margin-bottom: 24px;
+  }
+  .image-container {
+    gap: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .project-header {
+    margin-bottom: 80px;
+  }
+  .header-title {
+    position: static;
+    font-size: 5rem;
+    margin-left: 0px;
+  }
+  .header-image {
+    margin-top: 24px;
+    height: 240px;
+    gap: 8px;
+    padding: 24px;
+  }
+  .external-button {
+    padding: 8px;
+  }
+  .project-infos {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .project-subtitle-box {
+    width: 100%;
+  }
+  .project-info {
+    width: 100%;
+  }
+  .video-wrapper {
+    height: 200px;
+  }
+  .col-title {
+    width: 100%;
+  }
+  .section-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .takeaway-box {
+    width: 100%;
+  }
+  .mb-36 {
+    margin-bottom: 16px;
+  }
+  .image-container {
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .header-title {
+    font-size: 3rem;
+  }
+  .header-image {
+    height: 160px;
+  }
+  .project-subtitle {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+  .text-gap {
+    gap: 0px;
+  }
+  .detail-title {
+    font-size: 0.6rem;
+  }
+  .detail-description {
+    font-size: 0.6rem;
+  }
+  .video-wrapper {
+    height: 140px;
+  }
+  .video-wrapper-sm {
+    height: 140px;
+  }
+  .section-title {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .image-container {
+    gap: 8px;
+  }
+}
 * {
   box-sizing: border-box;
   -webkit-user-select: none;
@@ -1619,6 +1795,7 @@ a {
 @media screen and (max-width: 1280px) {
   .section-container {
     margin-bottom: 160px;
+    padding: 0px 36px;
   }
   .col-main {
     width: 100%;
@@ -1643,6 +1820,7 @@ a {
   }
   .section-container {
     padding: 0px 36px;
+    margin-bottom: 100px;
   }
   .col-system {
     gap: 24px;
