@@ -542,7 +542,7 @@ nav {
   font-weight: 200;
   font-size: 8rem;
   font-style: italic;
-  color: rgb(255, 255, 255);
+  color: rgb(112, 126, 139);
   text-decoration: none;
 }
 
@@ -1255,7 +1255,7 @@ body .transition {
 }
 
 .accent-circle {
-  position: fixed;
+  position: absolute;
   top: 20%;
   right: -10%;
   width: 640px;

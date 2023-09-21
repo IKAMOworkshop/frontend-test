@@ -1,6 +1,5 @@
 <template>
     <div>
-        <cursor/>
         <div id="element">
             <header class="experience-header content-hidden">
                 <h1 class="large-title">IN MY 8 YEARS OF DESIGN.</h1>
@@ -71,16 +70,9 @@
     import experienceTile from '@/components/experienceTile.vue'
     import capabilityTile from '@/components/capabilityTile.vue'
     import projectFooter from '@/components/projectFooter.vue'
-    import cursor from '@/components/cursor.vue'
     import { onMounted } from 'vue';
-    import luxy from 'luxy.js';
 
     onMounted(() => {
-        luxy.init({
-            wrapper: '#element',
-            wrapperSpeed: 0.06,
-        });
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 console.log(entry);

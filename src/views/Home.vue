@@ -1,6 +1,5 @@
 <template>
     <div>
-        <cursor/>
         <div id="element">
             <div id="text" class="landing-hero hero-hidden">
                 <div class="hero-row first">
@@ -93,17 +92,11 @@
 </template>
 
 <script setup>
-    import luxy from 'luxy.js';
     import projectTile from '@/components/projectTile.vue'
     import projectFooter from '@/components/projectFooter.vue'
-    import cursor from '@/components/cursor.vue'
     import { onMounted, nextTick } from 'vue';
 
     onMounted(() => {
-        luxy.init({
-            wrapper: '#element',
-            wrapperSpeed: 0.06,
-        });
 
         function imageHover(p1, p2){
             const text = document.querySelector(p1);

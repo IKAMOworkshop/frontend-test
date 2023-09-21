@@ -1,6 +1,5 @@
 <template>
     <div>
-        <cursor/>
         <div id="element">
             <header class="about-hero content-hidden">
                 <div class="about-hero-col-1">
@@ -154,16 +153,9 @@
 
 <script setup>
     import projectFooter from '@/components/projectFooter.vue'
-    import cursor from '@/components/cursor.vue'
     import { onMounted, onBeforeUpdate, onUpdated } from 'vue';
-    import luxy from 'luxy.js';
     
     onMounted(() => {
-        luxy.init({
-            wrapper: '#element',
-            wrapperSpeed: 0.06,
-        });
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 console.log(entry);

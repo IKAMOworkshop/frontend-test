@@ -1,4 +1,5 @@
 <template>
+    <cursor/>
     <div>
         <nav>
             <ul class="nav-group">
@@ -30,12 +31,13 @@
                 </div>
             </ul>
         </nav>
-
-        <router-view v-slot="{ Component }">
+        <div  id="element">
+            <router-view v-slot="{ Component }">
             <transition name="fade" mode="out-in">
                 <component :is="Component" />
             </transition>
         </router-view>
+        </div>
     </div>
 
 
@@ -45,6 +47,8 @@
 
 <script setup>
     import { RouterView } from 'vue-router'
+    import luxy from 'luxy.js';
+    import cursor from '@/components/cursor.vue'
 
     // Three JS
     import * as THREE from 'three';
@@ -66,6 +70,11 @@
     scene.add(camera, box, directionLight);
 
     onMounted(() => {
+        luxy.init({
+            wrapper: '#element',
+            wrapperSpeed: 0.06,
+        });
+
         const renderer = new THREE.WebGLRenderer({
             canvas: document.querySelector('#bg'),
             antialias: true,
