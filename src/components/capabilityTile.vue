@@ -12,7 +12,7 @@
                     <li class="left-description">{{ learning.list6 }}</li>
                 </ul>
             </div>
-            <div class="col-half">
+            <div class="col-half-sm">
                 <ul>
                     <li class="left-description">{{ learning.list7 }}</li>
                     <li class="left-description">{{ learning.list8 }}</li>

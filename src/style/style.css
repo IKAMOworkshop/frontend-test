@@ -1156,6 +1156,94 @@ body .transition {
   text-align: center;
 }
 
+@media screen and (max-width: 1280px) {
+  .learning-tile {
+    width: 100%;
+    padding: 36px;
+    gap: 24px;
+  }
+  .profile-image {
+    width: 60px;
+  }
+  .centered-title {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .centered-description {
+    font-size: 0.8rem;
+  }
+  .experience-tile {
+    padding: 36px;
+    gap: 24px;
+  }
+  .experience-profile {
+    min-width: 24%;
+    gap: 24px;
+    flex-direction: column;
+    align-items: start;
+  }
+  .experience-description {
+    width: 60%;
+  }
+  .left-text-container {
+    gap: 4px;
+  }
+  .experience-list {
+    margin-left: 24px;
+  }
+  .capability-tile {
+    padding: 36px;
+    gap: 24px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .experience-header {
+    padding: 200px 36px 0px 36px;
+  }
+  .scroll-down-experience {
+    top: 16%;
+    width: 300px;
+    height: 300px;
+  }
+  .experience-subtitle {
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .experience-tile {
+    flex-direction: column;
+    align-items: center;
+  }
+  .experience-profile {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .experience-description {
+    width: 100%;
+  }
+  .separator {
+    min-width: 100%;
+    min-height: 1px;
+  }
+  .scroll-down-experience {
+    display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  .experience-subtitle {
+    font-size: 1.5rem;
+  }
+  .experience-profile {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-text-container {
+    align-items: center;
+    text-align: center;
+  }
+}
 .contact-header {
   width: 100%;
   padding: 160px 148px 0px 148px;
@@ -1497,6 +1585,16 @@ a {
   .col-sub {
     width: 0%;
   }
+  .large-title {
+    font-size: 8rem;
+  }
+  .left-title {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .left-description {
+    font-size: 0.8rem;
+  }
 }
 @media screen and (max-width: 1024px) {
   .section-container {
@@ -1520,5 +1618,16 @@ a {
   .col-half {
     width: 100%;
     gap: 16px;
+  }
+  .col-half-sm {
+    width: 100%;
+  }
+  .large-title {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .large-title {
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */

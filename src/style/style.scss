@@ -121,6 +121,16 @@ a{
     .col-sub{
         width: 0%;
     }
+    .large-title{
+        font-size: 8rem;
+    }
+    .left-title{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .left-description{
+        font-size: .8rem;
+    }
 }
 
 @media screen and (max-width: 1024px){
@@ -146,5 +156,17 @@ a{
     .col-half{
         width: 100%;
         gap: 16px;
+    }
+    .col-half-sm{
+        width: 100%;
+    }
+    .large-title{
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .large-title{
+        font-size: 2rem;
     }
 }
