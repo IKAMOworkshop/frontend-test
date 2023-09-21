@@ -1,5 +1,6 @@
 <template>
     <div>
+        <cursor />
         <div id="element">
             <header class="experience-header content-hidden">
                 <h1 class="large-title">IN MY 8 YEARS OF DESIGN.</h1>
@@ -66,6 +67,7 @@
 </template>
 
 <script setup>
+    import cursor from '@/components/cursor.vue';
     import learningTile from '@/components/learningTile.vue'
     import experienceTile from '@/components/experienceTile.vue'
     import capabilityTile from '@/components/capabilityTile.vue'

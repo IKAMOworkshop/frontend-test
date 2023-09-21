@@ -1,5 +1,6 @@
 <template>
     <div>
+        <cursor />
         <div id="element">
             <header class="contact-header mb-160">
                 <h1 class="large-title">CONTACT!</h1>
@@ -34,6 +35,7 @@
 </template>
 
 <script setup>
+    import cursor from '@/components/cursor.vue';
     import { onMounted } from 'vue';
     
     onMounted(() => {

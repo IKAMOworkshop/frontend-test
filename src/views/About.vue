@@ -1,5 +1,6 @@
 <template>
     <div>
+        <cursor />
         <div id="element">
             <header class="about-hero content-hidden">
                 <div class="about-hero-col-1">
@@ -152,6 +153,7 @@
 </template>
 
 <script setup>
+    import cursor from '@/components/cursor.vue';
     import projectFooter from '@/components/projectFooter.vue'
     import { onMounted, onBeforeUpdate, onUpdated } from 'vue';
     

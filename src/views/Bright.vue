@@ -1,5 +1,6 @@
 <template>
     <div>
+        <cursor />
         <div id="element">
             <header class="experience-header">
                 <h1 class="experience-title">BRIGHT</h1>
@@ -11,6 +12,7 @@
 </template>
 
 <script setup>
+    import cursor from '@/components/cursor.vue';
     import { onMounted } from 'vue';
     
     onMounted(() => {

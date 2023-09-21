@@ -1,5 +1,6 @@
 <template>
     <div>
+        <cursor />
         <div id="element">
             <header class="project-header content-hidden">
                 <h1 class="header-title">CHARM</h1>
@@ -152,6 +153,7 @@
 </template>
 
 <script setup>
+    import cursor from '@/components/cursor.vue';
     import projectFooter from '@/components/projectFooter.vue'
     import { onMounted } from 'vue';
 
