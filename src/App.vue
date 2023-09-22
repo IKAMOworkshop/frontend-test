@@ -40,8 +40,6 @@
         </div>
     </div>
 
-
-
     <canvas id="bg" ref="experience"></canvas>
 </template>
 
@@ -52,56 +50,84 @@
 
     // Three JS
     import * as THREE from 'three';
+    import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+    import gsap from 'gsap';
     import { onMounted } from 'vue';
 
+    // Scene
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000,);
-    camera.position.set(0,5,20);
-    camera.rotation.set(0,0,0);
 
-    const box = new THREE.Mesh(
-        new THREE.BoxGeometry(8,8,8),
-        new THREE.MeshStandardMaterial({color: 0x008080}),
-    );
+    // Create our shpere
+    const geometry = new THREE.SphereGeometry(3, 64, 64);
+    const material = new THREE.MeshStandardMaterial({
+    color: '#00ffff',
+    roughness: 0.5,
+    });
+    const mesh = new THREE.Mesh(geometry, material);
 
-    const directionLight = new THREE.DirectionalLight(0xffffff,1);
-    directionLight.rotation.set(0,45,-45);
+    // Sizes
+    const sizes = {
+    width: window.innerWidth,
+    height: window.innerHeight,
+    }
 
-    scene.add(camera, box, directionLight);
+    // Camera
+    const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100);
+    camera.position.z = 20;
+    scene.add(camera);
+
+    // Light
+    const light = new THREE.PointLight(0xffffff, 10, 100);
+    light.position.set(3, 3, 5);
+
+    const ambientLight = new THREE.AmbientLight(0x404040);
+
+    // Add to Scene
+    scene.add(camera, mesh, light, ambientLight);
 
     onMounted(() => {
         luxy.init({
             wrapper: '#element',
-            wrapperSpeed: 0.06,
+            wrapperSpeed: 0.09,
         });
 
-        const renderer = new THREE.WebGLRenderer({
-            canvas: document.querySelector('#bg'),
-            antialias: true,
-        });
+        // Renderer
+        const canvas = document.querySelector('#bg');
+        const renderer = new THREE.WebGLRenderer({canvas});
 
-        renderer.setPixelRatio(window.devicePixelRatio);
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setClearColor(0x181B1E,1)
+        // Define how big the canvas and where to render it
+        renderer.setSize(sizes.width, sizes.height);
+        renderer.setPixelRatio(2);
+        renderer.setClearColor( 0x000000, 0 );
+        renderer.render(scene, camera);
 
-        window.addEventListener('resize', function(){
-            const width = window.innerWidth;
-            const height = window.innerHeight;
-            renderer.setSize(width, height);
-            camera.aspect = width / height;
+        // Controls
+        const controls = new OrbitControls(camera, canvas);
+        controls.enableDamping = true;
+        controls.enablePan = false;
+        controls.enableZoom = false;
+        controls.autoRotate = true;
+        controls.autoRotateSpeed = 5;
+
+        // Resize
+        window.addEventListener('resize', () => {
+            // Update Size
+            sizes.width = window.innerWidth;
+            sizes.height = window.innerHeight;
+            // Update Camera
+            camera.aspect = sizes.width / sizes.height;
             camera.updateProjectionMatrix();
+            renderer.setSize(sizes.width, sizes.height);
         });
 
-        function animate(){
-            requestAnimationFrame(animate);
-            box.rotation.x += 0.01;
-            box.rotation.y += 0.005;
-            box.rotation.z += 0.01;
-
+        // Loop Function
+        const loop = () => {
+            controls.update();
             renderer.render(scene, camera);
+            window.requestAnimationFrame(loop);
         };
 
-        animate();
+        loop();
 
         const aboutLink = document.getElementById('about-link');
         const aboutOutline = document.getElementById('about-outline');

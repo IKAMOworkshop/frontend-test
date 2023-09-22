@@ -125,8 +125,8 @@
             </section>
 
 
-            <router-link class="contact-title-section content-hidden" :to="{name: 'bright'}">
-                <h2 class="landing-section-title">NEXT PROJECT!</h2>
+            <router-link id="let-chat" class="contact-title-section content-hidden" to="/bright">
+                <h2 id="chat-title" class="landing-section-title">NEXT UP!</h2>
                 <div class="scroll-title-container">
                     <div class="scroll-row">
                         <div class="row-1">
@@ -158,6 +158,17 @@
     import { onMounted } from 'vue';
 
     onMounted(() => {
+        const contactButton = document.getElementById('let-chat');
+        const contactText = document.getElementById('chat-title');
+
+        contactButton.addEventListener('mouseover', () => {
+            contactText.style.transform = "scale(1.2) rotate(5deg)";
+        });
+
+        contactButton.addEventListener('mouseout', () => {
+            contactText.style.transform = "scale(1) rotate(0deg)"
+        });
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {

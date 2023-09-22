@@ -556,6 +556,7 @@ nav {
 
 .landing-section-title {
   text-align: center;
+  transition: all 1s;
 }
 
 .project-title {
@@ -1425,6 +1426,10 @@ body .transition {
   border-width: 1px;
   border-color: rgb(255, 255, 255);
   transition: all 0.5s;
+}
+
+.external-button:hover {
+  transform: scale(1.2) rotate(-10deg);
 }
 
 .project-infos {
