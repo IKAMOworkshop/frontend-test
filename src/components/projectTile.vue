@@ -44,7 +44,7 @@
                 cover: './src/assets/landing/charm.png',
                 name: 'ARCANE',
                 description: 'A portfolio project dedicated to showcase my frontend projects.',
-                tags: '#vite-vue #threejs',
+                tags: '#vite-vue #threejs #gsap',
                 path: 'arcane'
                 }
             ]
@@ -59,7 +59,6 @@
     onMounted(() => {
         const imageObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry);
                 if (entry.isIntersecting) {
                     entry.target.classList.add('image-reveal');
                 }
@@ -77,7 +76,6 @@
 
         const titleObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry);
                 if (entry.isIntersecting) {
                     entry.target.classList.add('title-reveal');
                 }
@@ -95,7 +93,6 @@
 
         const descriptionObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry);
                 if (entry.isIntersecting) {
                     entry.target.classList.add('description-reveal');
                 }
@@ -113,7 +110,6 @@
 
         const tagsObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry);
                 if (entry.isIntersecting) {
                     entry.target.classList.add('tags-reveal');
                 }
@@ -131,7 +127,6 @@
 
         const buttonObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry);
                 if (entry.isIntersecting) {
                     entry.target.classList.add('button-reveal');
                 }

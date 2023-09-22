@@ -27,7 +27,7 @@
                 </div>
             </div>
 
-            <button id="down-button" class="scroll-down hero-hidden">
+            <button @click="$emit('scrollDown', 'project-section')" id="down-button" class="scroll-down hero-hidden">
                 <img src="@/assets/down-arrow.svg" alt="">
             </button>
 
@@ -135,7 +135,6 @@
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry);
                 if (entry.isIntersecting) {
                     entry.target.classList.add('hero-reveal');
                 }
@@ -153,7 +152,6 @@
 
         const contentObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry);
                 if (entry.isIntersecting) {
                     entry.target.classList.add('content-reveal');
                 }
