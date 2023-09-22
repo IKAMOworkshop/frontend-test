@@ -1,5 +1,6 @@
 <template>
     <div class="project-section" v-for="project in projects">
+        <div class="project-image-blocker"></div>
         <div class="project-image-container image-hidden">
             <img class="project-image" :src="project.cover" alt="">
         </div>

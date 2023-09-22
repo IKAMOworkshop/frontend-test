@@ -39,7 +39,6 @@
         </router-view>
         </div>
     </div>
-
     <canvas id="bg" ref="experience"></canvas>
 </template>
 
@@ -58,29 +57,81 @@
     const scene = new THREE.Scene();
 
     // Create our shpere
-    const geometry = new THREE.SphereGeometry(3, 64, 64);
+    const geometry = new THREE.TorusKnotGeometry( 1, .2, 100, 16 );
     const material = new THREE.MeshStandardMaterial({
     color: '#00ffff',
-    roughness: 0.5,
+    roughness: 0.1,
     });
     const mesh = new THREE.Mesh(geometry, material);
+
+    // Particles
+    // const particlesGeometry = new THREE.BufferGeometry();
+    // const particlesCount = 5000;
+    // const loader = new THREE.TextureLoader();
+    // const triangleTexture = loader.load('./src/assets/particle_map.png');
+    // const particlesMaterial = new THREE.PointsMaterial({
+    //     size: 0.05,
+    //     map: triangleTexture,
+    //     transparent: true,
+    //     color: "rgba(112,126,139,1)",
+    // });
+
+    // const posArray = new Float32Array(particlesCount * 3);
+    
+    // for(let i = 0; i < particlesCount * 3; i++){
+    //     posArray[i] = (Math.random() - 0.5) * 15;
+    // };
+
+    // particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+    // const particleMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+
+    // Particles
+    const shape = new THREE.Shape();
+
+    const pointPosX = 0;
+    const pointPosY = 0;
+
+    shape.moveTo(pointPosX - 1, pointPosY - .3);
+    shape.lineTo(pointPosX + .3, pointPosY - .3);
+    shape.lineTo(pointPosX, pointPosY + .3);
+
+    function addParticle(){
+        const triangleGeometry = new THREE.ShapeGeometry(shape);
+        const triangleMaterial = new THREE.MeshStandardMaterial({
+            color: 0xffffff,
+            roughness: 0.2,
+        });
+        const triangleParticle = new THREE.Mesh(triangleGeometry, triangleMaterial);
+
+        const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(100));
+        
+        triangleParticle.position.set(x, y, z);
+        triangleParticle.rotation.set(x, y, z);
+
+        scene.add(triangleParticle);
+    };
+
+    const particleGroup = Array(1000).fill().forEach(addParticle);
 
     // Sizes
     const sizes = {
     width: window.innerWidth,
     height: window.innerHeight,
-    }
+    };
 
     // Camera
     const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100);
-    camera.position.z = 20;
-    scene.add(camera);
+    camera.position.z = 5;
 
     // Light
     const light = new THREE.PointLight(0xffffff, 10, 100);
     light.position.set(3, 3, 5);
 
     const ambientLight = new THREE.AmbientLight(0x404040);
+
+    // Moving Light
+    const movingPointLight = new THREE.PointLight(0xffffff, 10, 100);
 
     // Add to Scene
     scene.add(camera, mesh, light, ambientLight);
@@ -90,6 +141,7 @@
             wrapper: '#element',
             wrapperSpeed: 0.09,
         });
+
 
         // Renderer
         const canvas = document.querySelector('#bg');
@@ -106,23 +158,43 @@
         controls.enableDamping = true;
         controls.enablePan = false;
         controls.enableZoom = false;
-        controls.autoRotate = true;
-        controls.autoRotateSpeed = 5;
+        // controls.autoRotate = true;
+        // controls.autoRotateSpeed = 1;
 
         // Resize
         window.addEventListener('resize', () => {
             // Update Size
             sizes.width = window.innerWidth;
             sizes.height = window.innerHeight;
+
             // Update Camera
             camera.aspect = sizes.width / sizes.height;
             camera.updateProjectionMatrix();
             renderer.setSize(sizes.width, sizes.height);
         });
 
+        // Mouse Movements
+        document.addEventListener('mousemove', animateParticle);
+
+        let mouseX = 0;
+        let mouseY = 0;
+
+        function animateParticle(event) {
+            mouseX = event.clientX;
+            mouseY = event.clientY;
+        };
+
         // Loop Function
         const loop = () => {
             controls.update();
+
+            const clock = new THREE.Clock();
+            const elapsedTime = clock.getElapsedTime();
+
+            // Move Light with Cursor
+            movingPointLight.position.x = mouseX * elapsedTime;
+            movingPointLight.position.y = mouseY * elapsedTime;
+
             renderer.render(scene, camera);
             window.requestAnimationFrame(loop);
         };
