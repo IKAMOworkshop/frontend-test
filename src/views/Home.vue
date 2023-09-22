@@ -96,7 +96,7 @@
     import cursor from '@/components/cursor.vue';
     import projectTile from '@/components/projectTile.vue'
     import projectFooter from '@/components/projectFooter.vue'
-    import { onMounted, nextTick } from 'vue';
+    import { onMounted } from 'vue';
 
     onMounted(() => {
 
@@ -132,17 +132,6 @@
         imageHover(".design", "design");
         imageHover(".develop", "develop");
         imageHover(".hello", "hello");
-
-        const downButton = document.getElementById('down-button');
-        const projectTarget = document.getElementById('project-section');
-
-        function handleClick(){
-            nextTick(() => {
-                projectTarget.scrollIntoView({behavior: 'smooth'});
-            });
-        };
-
-        downButton.addEventListener('click', handleClick);
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
